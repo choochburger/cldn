@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   background-image: url("/images/bg.png");
+  font-family: georgia, serif;
 }
 
 #contentBlock {
@@ -14,6 +15,20 @@ body {
   -moz-box-shadow: 3px 3px 3px #ccc;
   -webkit-box-shadow: 3px 3px 3px #ccc;
   box-shadow: 3px 3px 3px #ccc;
+}
+
+#contentBlockHeader {
+  width: 796px;
+  margin: auto;
+  color: #fff;
+  background-image: url("/images/bg_green.png");
+  padding: 10px;
+  margin-top: 12px;
+}
+
+.avatar {
+  float: left;
+  margin-right: 8px;
 }
 
 .contentList {

@@ -1,5 +1,10 @@
 <div id="contentBlock">
 
+  <div id="contentBlockHeader">
+    <%= image_tag("/images/me.png", :class => "avatar") %>
+    <p>Hey everyone, thanks for dropping in and checking out my stuff. I do a ton of AS3/Flash platform development, but I also do quite a bit with Objective-C/iOS, javascript, css, php, and rails too. Below are a few samples of my work.</p>
+  </div>
+  
   <% @items.each do |item| %>
     <ul class="contentList"> 
       <li>
