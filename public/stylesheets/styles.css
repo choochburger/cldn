@@ -5,6 +5,14 @@ body {
   font-family: georgia, serif;
 }
 
+.header {
+  width: 836px;
+  height: 30px;
+  min-height: 30px;
+  padding: 0;
+  margin: 0px auto 4px;
+}
+
 #contentBlock {
   width: 836px;
   background-color: white;
@@ -31,14 +39,14 @@ body {
   margin-right: 8px;
 }
 
-.contentList {
+.collapsedList {
   list-style: none;
   margin-left: 0;
   padding-left: 0;
   text-indent: 0;
 }
 
-.contentList li {
+.collapsedList li {
   float: left;
   padding: 14px;
 }

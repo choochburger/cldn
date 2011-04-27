@@ -8,7 +8,16 @@
 </head>
 <body>
 
-<%= yield %>
+ <div class="header">
+  <ul class="collapsedList">
+    <li>Web</li>
+    <li>Music</li>
+    <li>Contact: chris [at] chrislyons.net</li>
+    <li>Twitter: <%= link_to "@choochburger", "http://www.twitter.com/choochburger", {:target => "_blank"} %></li>
+  </ul>
+ </div>
+
+  <%= yield %>
 
 </body>
 </html>
