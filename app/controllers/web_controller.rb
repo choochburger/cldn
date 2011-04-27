@@ -1,5 +1,5 @@
 class WebController < ApplicationController
   def show
-    @items = ContentItem.all
+    @items = WebItem.all
   end
 end
