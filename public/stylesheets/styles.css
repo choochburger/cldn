@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("/images/bg.png");
+}
+
+#contentBlock {
+  width: 836px;
+  background-color: white;
+  margin: auto;
+  border: 1px solid #bbb;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  -moz-box-shadow: 3px 3px 3px #ccc;
+  -webkit-box-shadow: 3px 3px 3px #ccc;
+  box-shadow: 3px 3px 3px #ccc;
+}
+
+.contentList {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+  text-indent: 0;
+}
+
+.contentList li {
+  float: left;
+  padding: 14px;
+}

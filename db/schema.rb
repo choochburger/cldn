@@ -10,6 +10,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 20110427012252) do
+
+  create_table "content_items", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "asset_link"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "thumbnail_link"
+  end
 
 end

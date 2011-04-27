@@ -1,2 +1,11 @@
-<h1>Web#show</h1>
-<p>Find me in app/views/web/show.html.erb</p>
+<div id="contentBlock">
+
+  <% @items.each do |item| %>
+    <ul class="contentList"> 
+      <li>
+        <%= image_tag(item.thumbnail_link) %>
+      </li>
+    </ul>
+  <% end %>
+<div style="clear: both"/>
+</div>
