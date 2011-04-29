@@ -50,3 +50,18 @@ body {
   float: left;
   padding: 14px;
 }
+
+.contentItem {
+  width: 250px;
+  height: 196px;
+}
+
+.description {
+  width: 250px;
+  height: 196px;
+  top: -200px;
+  position: relative;
+  background: #fff;
+  border: 1px solid #ccc;
+  opacity: 0;
+}

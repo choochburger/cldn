@@ -8,7 +8,12 @@
   <% @items.each do |item| %>
     <ul class="collapsedList"> 
       <li>
-        <%= image_tag(item.thumbnail_url) %>
+        <div class="contentItem">
+          <%= image_tag(item.thumbnail_url) %>
+          <div class="description">
+            <%= item.description %></p>
+          </div>
+        </div>
       </li>
     </ul>
   <% end %>
