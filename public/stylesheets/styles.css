@@ -63,5 +63,8 @@ body {
   position: relative;
   background: #fff;
   border: 1px solid #ccc;
-  opacity: 0;
+  display: none;
+  -moz-box-shadow: 1px 1px 1px #ccc;
+  -webkit-box-shadow: 1px 1px 1px #ccc;
+  box-shadow: 1px 1px 1px #ccc;
 }

@@ -5,17 +5,20 @@
     <p>Hey everyone, thanks for dropping in and checking out my stuff. I do a ton of AS3/Flash platform development, but I also do quite a bit with Objective-C/iOS, Javascript, CSS, PHP, and Rails too. Below are a few samples of my work.</p>
   </div>
   
-  <% @items.each do |item| %>
-    <ul class="collapsedList"> 
-      <li>
-        <div class="contentItem">
-          <%= image_tag(item.thumbnail_url) %>
-          <div class="description">
-            <%= item.description %></p>
+  <ul class="collapsedList"> 
+
+    <% @items.each do |item| %>
+        <li>
+          <div class="contentItem">
+            <%= image_tag(item.thumbnail_url) %>
+            <div class="description">
+              <p class="invisible"><%= item.description %></p>
+            </div>
           </div>
-        </div>
-      </li>
-    </ul>
-  <% end %>
-<div style="clear: both"/>
+        </li>
+    <% end %>
+    
+  </ul>
+  
+  <div style="clear: both"/>
 </div>
