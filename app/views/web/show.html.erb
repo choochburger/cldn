@@ -22,7 +22,7 @@
   
   <script type="text/javascript">
     $(document).ready(function() {
-      cldn.data( <%= @items.map {|item| { :url => item.asset_url } }.to_json.html_safe %> );
+      cldn.data(<%= @items_json.html_safe %>);
     });
   </script>
 

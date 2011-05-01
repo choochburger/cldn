@@ -10,24 +10,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110427024708) do
+ActiveRecord::Schema.define(:version => 20110501182523) do
 
   create_table "content_items", :force => true do |t|
     t.string   "title"
     t.text     "description"
-    t.string   "asset_link"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "thumbnail_link"
-  end
-
-  create_table "web_items", :force => true do |t|
-    t.string   "title"
-    t.text     "description"
-    t.text     "thumbnail_url"
-    t.text     "asset_url"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string   "asset_url"
+    t.string   "thumbnail_url"
+    t.string   "kind"
+    t.string   "category"
+    t.datetime "update_at"
+    t.datetime "create_at"
+    t.integer  "width"
+    t.integer  "height"
   end
 
 end

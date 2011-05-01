@@ -27,11 +27,22 @@ var cldn = {
         var pattern = /[0-9]+/g 
         var index = pattern.exec(id);
         var path = _data[index].url;
+        var types = { image:'img', video: 'qt', flash: 'swf', audio: 'jp' };
+        var playerType = types[_data[index].type];
 
-        console.log(path); 
+        // audio opens in jplayer, all else is in a shadowbox
+        if (playerType == types.audio) {  
+          console.log('fade in...');
+          $('.jp-audio').fadeIn();
+          $('#player').jPlayer("setMedia", {mp3: path}).jPlayer('play');
+        } else if (playerType == types.flash) {
+          var width  = _data[index].width;
+          var height = _data[index].height;
 
-        //Shadowbox.open({ content: path, player: 'qt' });
-        Shadowbox.open({ content: path, player: 'img' });
+          Shadowbox.open({ content: path, player: playerType, width: width, height: height});
+        } else {
+          Shadowbox.open({ content: path, player: playerType });
+        }
       }
     );
   },
@@ -39,7 +50,15 @@ var cldn = {
   initJPlayer: function () {
    $('#player').jPlayer( {
       ready: function() {
-        //console.log('ready');
+        console.log('player ready');
+
+      },
+      
+      swfPath: 'javascripts/jplayer',
+      solution: 'html, flash',
+
+      error: function(e) {
+        console.log(e.jPlayer.error);
       }
    });
   },
