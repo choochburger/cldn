@@ -2,8 +2,13 @@
 <html>
 <head>
   <title>chrislyons.net</title>
-  <%= stylesheet_link_tag "jplayer/jplayer.blue.monday.css", "styles.css" %>
-  <%= javascript_include_tag "jquery-1.5.2.min.js", "jplayer/jquery.jplayer.min.js", "application.js" %>
+  <%= stylesheet_link_tag "jplayer/jplayer.blue.monday.css",
+                          "styles.css",
+                          "shadowbox-3.0.3/shadowbox.css" %>
+  <%= javascript_include_tag "jquery-1.5.2.min.js",
+                             "jplayer/jquery.jplayer.min.js",
+                             "shadowbox-3.0.3/shadowbox.js", 
+                             "application.js" %>
   <%= csrf_meta_tag %>
 </head>
 <body>

@@ -7,11 +7,11 @@
   
   <ul class="collapsedList"> 
 
-    <% @items.each do |item| %>
+    <% @items.each_with_index do |item, index| %>
         <li>
           <div class="contentItem">
             <%= image_tag(item.thumbnail_url) %>
-            <div class="description">
+            <div class="description" id="item-<%= index %>">
               <p class="invisible"><%= item.description %></p>
             </div>
           </div>
@@ -20,5 +20,12 @@
     
   </ul>
   
+  <script type="text/javascript">
+    $(document).ready(function() {
+      cldn.data( <%= @items.map {|item| { :url => item.asset_url } }.to_json.html_safe %> );
+    });
+  </script>
+
   <div style="clear: both"/>
 </div>
+

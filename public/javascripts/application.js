@@ -1,34 +1,61 @@
-var cldn = (function() {
+(function(window) {
   
+var document = window.document;
+var _data;
+
 $(document).ready(function() {
-  initDescriptions();
-  initJPlayer();
+  cldn.initDescriptions();
+  cldn.initJPlayer();
+  Shadowbox.init();
 });
 
-function initDescriptions() {
+var cldn = {
 
-  $('.contentItem').hover(
-    function() {
-      $(this).find('.description').fadeIn(500);
-    },
-    function() {
-      $(this).find('.description').fadeOut(400);
-    });
-}
+  initDescriptions: function() {
 
-function initJPlayer() {
- $('#player').jPlayer( {
-    ready: function() {
-      $(this).jPlayer('setMedia', {
-        mp3: 'http://www.chrislyons.net/music/brothers_banded.mp3'
+    $('.contentItem').hover(
+      function() {
+        $(this).find('.description').fadeIn(500);
+      },
+      function() {
+        $(this).find('.description').fadeOut(400);
       });
-      
-      console.log('ready');
-    }
- });
-}
+
+    $('.description').click(
+      function() {
+        var id = $(this).attr('id');
+        var pattern = /[0-9]+/g 
+        var index = pattern.exec(id);
+        var path = _data[index].url;
+
+        console.log(path); 
+
+        //Shadowbox.open({ content: path, player: 'qt' });
+        Shadowbox.open({ content: path, player: 'img' });
+      }
+    );
+  },
+
+  initJPlayer: function () {
+   $('#player').jPlayer( {
+      ready: function() {
+        //console.log('ready');
+      }
+   });
+  },
+
+  data: function (d) {
+    _data = d;
+    console.log('storing data...');
+  },
+
+  getData: function() {
+    return _data;
+  } 
+
+};
+
+window.cldn = cldn;
 
 
-
-
-})();
+})(window);
