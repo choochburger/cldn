@@ -63,14 +63,34 @@ var cldn = {
         console.log('player ready');
 
       },
+
+      pause: function() {
+        $('.jp-audio').fadeOut();
+      },
       
       swfPath: 'javascripts/jplayer',
       solution: 'html, flash',
-
+      
       error: function(e) {
         console.log(e.jPlayer.error);
       }
    });
+
+   // watch for scroll and lock player to the top if player is out of view
+   $(window).scroll(function (e) { 
+     var jpa = $('.jp-audio');
+     var scroll = $(window).scrollTop(); 
+
+     if (scroll > jpa.height()/3 + jpa.offset().top) {
+        jpa.data('origTop', jpa.offset().top);
+        jpa.addClass('sticky-player');
+      } else if (jpa.hasClass('sticky-player') &&
+                 scroll < jpa.data('origTop')) {
+        jpa.removeClass('sticky-player');
+        console.log('removing!');
+      }
+   });
+
   },
 
   data: function (d) {
