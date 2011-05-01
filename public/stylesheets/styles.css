@@ -14,7 +14,7 @@ body {
 }
 
 #contentBlock {
-  width: 836px;
+  width: 856px;
   background-color: white;
   margin: auto;
   border: 1px solid #bbb;
@@ -54,6 +54,7 @@ body {
 .contentItem {
   width: 250px;
   height: 196px;
+  border: 1px solid #eee;
 }
 
 .description {
@@ -64,8 +65,23 @@ body {
   background: #fff;
   border: 1px solid #ccc;
   display: none;
+  text-align: center;
+  padding: 0 4px;
   -moz-box-shadow: 1px 1px 1px #ccc;
   -webkit-box-shadow: 1px 1px 1px #ccc;
   box-shadow: 1px 1px 1px #ccc;
   cursor: pointer;
+}
+
+/* clears the list so background will extend all of the way down */
+.clearList {
+  clear: both;
+}
+
+/* footer is to mainly make sure that jPlayer doesn't obscure any content */
+#footer {
+  display: block;
+  height: 80px;
+  min-height: 80px;
+  width: 600px;
 }

@@ -27,21 +27,31 @@ var cldn = {
         var pattern = /[0-9]+/g 
         var index = pattern.exec(id);
         var path = _data[index].url;
-        var types = { image:'img', video: 'qt', flash: 'swf', audio: 'jp' };
+        var types = { image:'img', video: 'qt', flash: 'swf', audio: 'jp', link: 'link' };
         var playerType = types[_data[index].type];
 
-        // audio opens in jplayer, all else is in a shadowbox
+        // audio opens in jplayer, links go to new page (for now),  all else is in a shadowbox
         if (playerType == types.audio) {  
           console.log('fade in...');
           $('.jp-audio').fadeIn();
           $('#player').jPlayer("setMedia", {mp3: path}).jPlayer('play');
-        } else if (playerType == types.flash) {
+        } else if (playerType == types.link) {
+          window.location = path;
+        } else if (playerType == types.flash ||
+                   playerType == types.video) {
           var width  = _data[index].width;
           var height = _data[index].height;
 
           Shadowbox.open({ content: path, player: playerType, width: width, height: height});
         } else {
           Shadowbox.open({ content: path, player: playerType });
+        }
+
+        // stop and hide jPlayer if content is video or swf
+        if (playerType == types.video ||
+            playerType == types.flash) {
+            $('#player').jPlayer('stop');
+            $('.jp-audio').fadeOut();
         }
       }
     );
