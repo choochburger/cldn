@@ -2,31 +2,8 @@
 
   <div id="contentBlockHeader">
     <%= image_tag("/images/me.png", :class => "avatar") %>
-    <p>Hey everyone, thanks for dropping in and checking out my stuff. I'm mainly an AS3/Flash platform developer, but I also do quite a bit with Objective-C/iOS, Javascript, CSS, PHP, and Rails too. Below are a few samples of my work.</p>
+    <p>Hey everyone, thanks for dropping in and checking out my stuff. I'm mainly an AS3/Flash platform developer, but I also do quite a bit with Objective-C/iOS, Javascript, CSS, PHP, and Rails too. Below are a few samples of my work.'</p>
   </div>
+
+  <%= render :partial => "shared/content", :locals => { :items => @items } %>
   
-  <ul class="collapsedList"> 
-
-    <% @items.each_with_index do |item, index| %>
-        <li>
-          <div class="contentItem">
-            <%= image_tag(item.thumbnail_url) %>
-            <div class="description" id="item-<%= index %>">
-              <p class="invisible"><%= item.description %></p>
-            </div>
-          </div>
-        </li>
-    <% end %>
-    
-  </ul>
-  
-  <script type="text/javascript">
-    $(document).ready(function() {
-      cldn.data(<%= @items_json.html_safe %>);
-    });
-  </script>
-
-  <div class="clearList"/>
-</div>
-
-

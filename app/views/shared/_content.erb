@@ -1,0 +1,24 @@
+  <ul class="collapsedList">
+
+    <% @items.each_with_index do |item, index| %>
+        <li>
+          <div class="contentItem">
+            <%= image_tag(item.thumbnail_url) %>
+            <div class="description" id="item-<%= index %>">
+              <p class="invisible"><%= item.description %></p>
+            </div>
+          </div>
+        </li>
+    <% end %>
+    
+  </ul>
+
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      cldn.data(<%= @items_json.html_safe %>);
+    });
+  </script>
+
+  <div class="clearList"/>
+</div>

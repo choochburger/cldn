@@ -1,2 +1,11 @@
-<h1>Music#show</h1>
-<p>Find me in app/views/music/show.html.erb</p>
+<div id="contentBlock">
+
+<% # if this top part isn't going to change, move into content partial and abstract the text portion? %>
+
+  <div id="contentBlockHeader">
+    <%= image_tag("/images/me.png", :class => "avatar") %>
+    <p>Below are some of my original compositions, collaborations, covers, and recordings for films, games, and bands I've been in -- and some just for fun. If you need music for an upcoming project or would like to collaborate please get in touch!</p>
+  </div>
+
+  <%= render :partial => "shared/content", :locals => { :items => @items } %>
+  
