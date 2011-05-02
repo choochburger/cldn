@@ -61,7 +61,10 @@ var cldn = {
    $('#player').jPlayer( {
       ready: function() {
         console.log('player ready');
+      },
 
+      play: function() {
+        cldn.checkPlayerScroll();
       },
 
       pause: function() {
@@ -77,20 +80,26 @@ var cldn = {
    });
 
    // watch for scroll and lock player to the top if player is out of view
-   $(window).scroll(function (e) { 
+   $(window).scroll(function () { 
+     cldn.checkPlayerScroll();
+   });
+
+  },
+
+  checkPlayerScroll: function () {
      var jpa = $('.jp-audio');
      var scroll = $(window).scrollTop(); 
 
+     // fix player to top of window if start scrolling past it
+     // or click a song when the player is out of view
+     //
      if (scroll > jpa.height()/3 + jpa.offset().top) {
         jpa.data('origTop', jpa.offset().top);
         jpa.addClass('sticky-player');
       } else if (jpa.hasClass('sticky-player') &&
                  scroll < jpa.data('origTop')) {
         jpa.removeClass('sticky-player');
-        console.log('removing!');
       }
-   });
-
   },
 
   data: function (d) {

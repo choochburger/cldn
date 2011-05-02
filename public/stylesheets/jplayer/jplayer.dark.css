@@ -38,6 +38,7 @@ div.jp-audio {
 .sticky-player {
   position: fixed !important;
   top: 0px;
+  margin-left: 12px !important;
 }
 
 div.jp-video-270p {
@@ -268,7 +269,7 @@ div.jp-audio div.jp-type-single div.jp-progress {
 	height: 15px;
 	left: 130px;
 	top: 32px;
-	width: 122px;
+	width: 550px;
 }
 
 div.jp-audio div.jp-type-playlist div.jp-progress {
@@ -316,7 +317,7 @@ a.jp-unmute {
 
 div.jp-audio div.jp-type-single a.jp-mute,
 div.jp-audio div.jp-type-single a.jp-unmute {
-	left: 274px;
+	right: 100px;
 	top: 32px;
 }
 
@@ -378,7 +379,8 @@ div.jp-volume-bar {
 }
 
 div.jp-audio div.jp-type-single div.jp-volume-bar {
-	left: 302px;
+	/*left: 302px; */
+  right: 20px;
 	top: 37px;
 }
 
@@ -429,7 +431,7 @@ div.jp-audio div.jp-type-single div.jp-current-time,
 div.jp-audio div.jp-type-single div.jp-duration {
 	left: 130px;
 	top: 49px;
-	width: 122px;
+	width: 550px;
 }
 
 div.jp-audio div.jp-type-playlist div.jp-current-time,
