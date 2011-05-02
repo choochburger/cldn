@@ -8,9 +8,11 @@ body {
 .header {
   width: 836px;
   height: 30px;
-  min-height: 30px;
-  padding: 0;
+  min-height: 10px;
+  padding: 0 0 2px 0;
   margin: 0px auto 4px;
+  font-size: 18px;
+  color: #222;
 }
 
 #contentBlock {
@@ -34,6 +36,13 @@ body {
   margin-top: 12px;
 }
 
+.content {
+  width: 846px;
+  padding: 0;
+  margin: 0;
+  margin: auto;
+}
+
 .avatar {
   float: left;
   margin-right: 8px;
@@ -48,7 +57,7 @@ body {
 
 .collapsedList li {
   float: left;
-  padding: 14px;
+  padding: 15px;
 }
 
 .contentItem {

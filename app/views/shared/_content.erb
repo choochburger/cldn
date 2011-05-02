@@ -1,18 +1,19 @@
-  <ul class="collapsedList">
+  <div class="content">
+    <ul class="collapsedList">
 
-    <% @items.each_with_index do |item, index| %>
-        <li>
-          <div class="contentItem">
-            <%= image_tag(item.thumbnail_url) %>
-            <div class="description" id="item-<%= index %>">
-              <p class="invisible"><%= item.description %></p>
+      <% @items.each_with_index do |item, index| %>
+          <li>
+            <div class="contentItem">
+              <%= image_tag(item.thumbnail_url) %>
+              <div class="description" id="item-<%= index %>">
+                <p class="invisible"><%= item.description %></p>
+              </div>
             </div>
-          </div>
-        </li>
-    <% end %>
-    
-  </ul>
-
+          </li>
+      <% end %>
+      
+    </ul>
+  </div>
 
   <script type="text/javascript">
     $(document).ready(function() {
