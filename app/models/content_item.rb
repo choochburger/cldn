@@ -1,6 +1,7 @@
 class ContentItem < ActiveRecord::Base
   def self.by_web_only
-    where('category = "web"')
+    #where('category = "web"')
+    where :category => 'web"
   end
 
   def self.by_music_only
