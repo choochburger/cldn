@@ -27,7 +27,7 @@ var cldn = {
         var pattern = /[0-9]+/g 
         var index = pattern.exec(id);
         var path = _data[index].url;
-        var types = { image:'img', video: 'qt', flash: 'swf', audio: 'jp', link: 'link' };
+        var types = { image:'img', video: 'qt', flash: 'swf', audio: 'jp', link: 'iframe' };
         var playerType = types[_data[index].type];
 
         // audio opens in jplayer, links go to new page (for now),  all else is in a shadowbox
@@ -35,8 +35,6 @@ var cldn = {
           console.log('fade in...');
           $('.jp-audio').fadeIn();
           $('#player').jPlayer("setMedia", {mp3: path}).jPlayer('play');
-        } else if (playerType == types.link) {
-          window.location = path;
         } else if (playerType == types.flash ||
                    playerType == types.video) {
           var width  = _data[index].width;
