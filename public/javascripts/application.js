@@ -36,7 +36,8 @@ var cldn = {
           $('.jp-audio').fadeIn();
           $('#player').jPlayer("setMedia", {mp3: path}).jPlayer('play');
         } else if (playerType == types.flash ||
-                   playerType == types.video) {
+                   playerType == types.video ||
+                   playerType == types.link) {
           var width  = _data[index].width;
           var height = _data[index].height;
 
