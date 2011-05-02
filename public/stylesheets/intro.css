@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("/images/bg.png");
+}
+
+#music-skull {
+  position: absolute;
+  top: 20%;
+  left: 60px;
+  background: url('../images/music_skull.png') no-repeat;
+  min-width: 224px;
+  height: 306px;
+}
+
+#music-bubble {
+  position: absolute;
+  left: 224px;
+  background: url('../images/music_bubble.png') no-repeat;
+  min-width: 306px;
+  width: 306px;
+  height: 176px;
+}
+
+#web-skull {
+  position: absolute;
+  top: 20%;
+  right: 10%;
+  background: url('../images/web_skull.png') no-repeat;
+  min-width: 215px;
+  width: 215px;
+  height: 310px;
+}
+
+#web-bubble {
+  position: absolute;
+  right: 215px;
+  background: url('../images/web_bubble.png') no-repeat;
+  min-width: 307px;
+  height: 176px;
+}

@@ -1,1 +1,11 @@
-<%= link_to "Web", web_path %> | <%= link_to "Music", music_path %>
+<%= link_to web_path do %>
+  <div id="music-skull">
+    <div id="music-bubble"></div>
+  </div>
+<% end %>
+
+<%= link_to music_path do %>
+  <div id="web-skull">
+    <div id="web-bubble"></div>
+  </div>
+<% end %>
