@@ -1,0 +1,23 @@
+ <div class="header">
+  <ul class="collapsedList">
+  <% # todo: Refactor this. I'm sure there's a cleaner way to do this. Maybe make UI Tabs at top? %>
+    <li>
+        <% if params[:controller] == 'web' %>
+          <i>* Web *</i>
+        <% else %>
+          <%= link_to "Web", web_path %> 
+        <% end %>
+    </li>
+
+    <li>
+        <% if params[:controller] == 'music' %>
+          <i>* Music *</i>
+        <% else %>
+          <%= link_to "Music", music_path %> 
+        <% end %>
+    </li>
+
+    <li>Contact: chris [at] chrislyons.net</li>
+    <li>Twitter: <%= link_to "@choochburger", "http://www.twitter.com/choochburger", {:target => "_blank"} %></li>
+  </ul>
+ </div>
