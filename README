@@ -1,1 +1,11 @@
-Converting old PHP/MySQL version of chrislyons.net to Rails
+Converting my php portfolio site. chrislyons.net will soon be riding the rails. choo chooooo, bitch!
+
+   _____                 . . . . . o o o o o
+  __|[_]|__ ___________ _______    ____      o
+ |[] [] []| [] [] [] [] [_____(__  ][]]_n_n__][.
+_|________|_[_________]_[________]_|__|__cldn__)<
+  oo    oo 'oo      oo ' oo    oo 'oo 0000---oo\_
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Old php production version located at: http://www.chrislyons.net
+Current rails development version (not guaranteed to work): http://cldn.heroku.com
