@@ -86,6 +86,12 @@ body {
   clear: both;
 }
 
+/* jPlayer is setting a black background on the flash player in older browsers
+ * overriding that here */
+#player {
+  background-color: #fff !important;
+}
+
 /* footer is to mainly make sure that jPlayer doesn't obscure any content */
 #footer {
   display: block;
