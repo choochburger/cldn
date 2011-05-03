@@ -30,21 +30,20 @@ var cldn = {
         var types = { image:'img', video: 'qt', flash: 'swf', audio: 'jp', link: 'iframe' };
         var playerType = types[_data[index].type];
 
-        // audio opens in jplayer, links go to new page (for now),  all else is in a shadowbox
+        // audio opens in jplayer. all else is in a shadowbox
         if (playerType == types.audio) {  
           console.log('fade in...');
           $('.jp-audio').fadeIn();
           $('#player').jPlayer("setMedia", {mp3: path}).jPlayer('play');
-        } else if (playerType == types.flash ||
-                   playerType == types.video ||
-                   playerType == types.link) {
+        } else if (playerType == types.image) {
+          // shadowbox can auto detect with and height, so not needed here
+          Shadowbox.open({ content: path, player: playerType });
+        } else {
           var width  = _data[index].width;
           var height = _data[index].height;
 
           Shadowbox.open({ content: path, player: playerType, width: width, height: height});
-        } else {
-          Shadowbox.open({ content: path, player: playerType });
-        }
+        } 
 
         // stop and hide jPlayer if content is video or swf
         if (playerType == types.video ||
