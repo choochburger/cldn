@@ -92,6 +92,15 @@ body {
   background-color: #fff !important;
 }
 
+#song-title {
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+  text-shadow: 2px 2px 2px #333;
+}
+
 /* footer is to mainly make sure that jPlayer doesn't obscure any content */
 #footer {
   display: block;

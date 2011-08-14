@@ -1,5 +1,5 @@
 (function(window) {
-  
+
 var document = window.document;
 var _data;
 
@@ -24,17 +24,18 @@ var cldn = {
     $('.description').click(
       function() {
         var id = $(this).attr('id');
-        var pattern = /[0-9]+/g 
+        var pattern = /[0-9]+/g
         var index = pattern.exec(id);
         var path = _data[index].url;
         var types = { image:'img', video: 'qt', flash: 'swf', audio: 'jp', link: 'iframe' };
         var playerType = types[_data[index].type];
 
         // audio opens in jplayer. all else is in a shadowbox
-        if (playerType == types.audio) {  
+        if (playerType == types.audio) {
           console.log('fade in...');
           $('.jp-audio').fadeIn();
           $('#player').jPlayer("setMedia", {mp3: path}).jPlayer('play');
+          $('#song-title').text(_data[index].title);
         } else if (playerType == types.image) {
           // shadowbox can auto detect with and height, so not needed here
           Shadowbox.open({ content: path, player: playerType });
@@ -43,7 +44,7 @@ var cldn = {
           var height = _data[index].height;
 
           Shadowbox.open({ content: path, player: playerType, width: width, height: height});
-        } 
+        }
 
         // stop and hide jPlayer if content is video or swf
         if (playerType == types.video ||
@@ -58,7 +59,6 @@ var cldn = {
   initJPlayer: function () {
    $('#player').jPlayer( {
       ready: function() {
-        console.log('player ready');
       },
 
       play: function() {
@@ -68,17 +68,17 @@ var cldn = {
       pause: function() {
         $('.jp-audio').fadeOut();
       },
-      
+
       swfPath: 'javascripts/jplayer',
       solution: 'html, flash',
-      
+
       error: function(e) {
         console.log(e.jPlayer.error);
       }
    });
 
    // watch for scroll and lock player to the top if player is out of view
-   $(window).scroll(function () { 
+   $(window).scroll(function () {
      cldn.checkPlayerScroll();
    });
 
@@ -86,7 +86,7 @@ var cldn = {
 
   checkPlayerScroll: function () {
      var jpa = $('.jp-audio');
-     var scroll = $(window).scrollTop(); 
+     var scroll = $(window).scrollTop();
 
      // fix player to top of window if start scrolling past it
      // or click a song when the player is out of view
@@ -107,7 +107,7 @@ var cldn = {
 
   getData: function() {
     return _data;
-  } 
+  }
 
 };
 
