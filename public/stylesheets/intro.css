@@ -6,25 +6,26 @@ body {
 
 #music-skull {
   position: absolute;
-  top: 20%;
   left: 60px;
   background: url('../images/music_skull.png') no-repeat;
   min-width: 224px;
   height: 306px;
+  top: -306px;
 }
 
 #music-bubble {
-  position: absolute;
-  left: 224px;
   background: url('../images/music_bubble.png') no-repeat;
-  min-width: 306px;
-  width: 306px;
+  display: none;
   height: 176px;
+  left: 224px;
+  min-width: 306px;
+  position: absolute;
+  width: 306px;
 }
 
 #web-skull {
   position: absolute;
-  top: 20%;
+  top: -310px;
   right: 10%;
   background: url('../images/web_skull.png') no-repeat;
   min-width: 215px;
@@ -33,9 +34,10 @@ body {
 }
 
 #web-bubble {
+  background: url('../images/web_bubble.png') no-repeat;
+  display: none;
+  height: 176px;
+  min-width: 307px;
   position: absolute;
   right: 215px;
-  background: url('../images/web_bubble.png') no-repeat;
-  min-width: 307px;
-  height: 176px;
 }
