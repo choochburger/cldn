@@ -5,6 +5,10 @@ body {
   font-family: georgia, serif;
 }
 
+.clear {
+  clear: both;
+}
+
 .header {
   width: 836px;
   height: 30px;
