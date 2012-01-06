@@ -4,6 +4,13 @@ body {
   background-image: url("/images/bg.png");
 }
 
+/* preload images */
+body:after {
+  content: url('../images/music_skull.png') url('../images/music_bubble.png') url('../images/web_skull.png') url('../images/web_bubble.png');
+  display: none;
+}
+/* ************** */
+
 #music-skull {
   position: absolute;
   left: 60px;
