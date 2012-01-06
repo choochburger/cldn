@@ -12,8 +12,7 @@ var cldn = {
     this.$musicSkull = $('#music-skull');
     this.$webSkull   = $('#web-skull');
 
-    //this.preloadImages([this.$musicSkull, this.$webSkull]);
-    this.onAllLoaded();
+    this.preloadImages([this.$musicSkull, this.$webSkull]);
   },
 
   preloadImages: function(els) {
