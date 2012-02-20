@@ -4,3 +4,6 @@ tmp/
 .DS_Store
 *.swp
 *.swo
+db/*.sqlite3
+public/music
+public/web
