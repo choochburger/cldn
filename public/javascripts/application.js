@@ -32,7 +32,6 @@ var cldn = {
 
         // audio opens in jplayer. all else is in a shadowbox
         if (playerType == types.audio) {
-          console.log('fade in...');
           $('.jp-audio').fadeIn();
           $('#player').jPlayer("setMedia", {mp3: path}).jPlayer('play');
           $('#song-title').text(_data[index].title);
@@ -102,7 +101,6 @@ var cldn = {
 
   data: function (d) {
     _data = d;
-    console.log('storing data...');
   },
 
   getData: function() {
