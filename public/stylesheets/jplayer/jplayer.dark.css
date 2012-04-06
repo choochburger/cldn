@@ -261,6 +261,7 @@ a.jp-next:hover {
 }
 
 div.jp-progress {
+  background: rgba(255,255,255,0.4);
 	overflow: hidden;
 	position: absolute;
 }

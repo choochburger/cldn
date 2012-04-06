@@ -9,6 +9,10 @@ body {
   clear: both;
 }
 
+.fr {
+  float: right !important;
+}
+
 .header {
   width: 836px;
   height: 30px;
@@ -32,6 +36,8 @@ body {
 }
 
 #contentBlockHeader {
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.4) inset;
+  border-radius: 8px 8px 0 0;
   width: 796px;
   margin: auto;
   color: #fff;
@@ -48,6 +54,7 @@ body {
 }
 
 .avatar {
+  border-radius: 8px 8px 0 0;
   float: left;
   margin-right: 8px;
 }
@@ -68,6 +75,13 @@ body {
   width: 250px;
   height: 196px;
   border: 1px solid #eee;
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+.contentItem,
+.contentItem img,
+.contentItem .description {
+  border-radius: 8px;
 }
 
 .description {
@@ -83,6 +97,10 @@ body {
   -webkit-box-shadow: 1px 1px 1px #ccc;
   box-shadow: 1px 1px 1px #ccc;
   cursor: pointer;
+}
+
+.description p {
+  padding: 4px;
 }
 
 /* clears the list so background will extend all of the way down */
