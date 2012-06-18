@@ -1,20 +1,20 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url("/images/bg.png");
+  background-image: url(<%= asset_data_uri "bg.png" %>);
 }
 
 #music-skull {
   position: absolute;
   left: 60px;
-  background: url('../images/music_skull.png') no-repeat;
+  background: url(<%= asset_data_uri "music_skull.png" %>) no-repeat;
   min-width: 224px;
   height: 306px;
   top: -306px;
 }
 
 #music-bubble {
-  background: url('../images/music_bubble.png') no-repeat;
+  background: url(<%= asset_data_uri "music_bubble.png" %>) no-repeat;
   display: none;
   height: 176px;
   left: 224px;
@@ -27,14 +27,14 @@ body {
   position: absolute;
   top: -310px;
   right: 10%;
-  background: url('../images/web_skull.png') no-repeat;
+  background: url(<%= asset_data_uri "web_skull.png" %>) no-repeat;
   min-width: 215px;
   width: 215px;
   height: 310px;
 }
 
 #web-bubble {
-  background: url('../images/web_bubble.png') no-repeat;
+  background: url(<%= asset_data_uri "web_bubble.png" %>) no-repeat;
   display: none;
   height: 176px;
   min-width: 307px;

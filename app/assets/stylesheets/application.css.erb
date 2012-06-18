@@ -1,7 +1,12 @@
+/*
+*= require_self
+*= require_tree .
+*/
+
 body {
   margin: 0;
   padding: 0;
-  background-image: url("/images/bg.png");
+  background-image: url(<%= asset_data_uri "bg.png" %>);
   font-family: georgia, serif;
 }
 
@@ -41,7 +46,7 @@ body {
   width: 796px;
   margin: auto;
   color: #fff;
-  background-image: url("/images/bg_green.png");
+  background-image: url(<%= asset_data_uri "bg_green.png" %>);
   padding: 10px;
   margin-top: 12px;
 }

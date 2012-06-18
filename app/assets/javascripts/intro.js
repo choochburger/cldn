@@ -12,12 +12,15 @@ var cldn = {
     this.$musicSkull = $('#music-skull');
     this.$webSkull   = $('#web-skull');
 
+    /*
     this.preloadImages([
       this.$musicSkull,
       this.$webSkull,
       $('#music-bubble'),
       $('#web-bubble')
     ]);
+    */
+    this.onAllLoaded();
   },
 
   preloadImages: function(els) {
@@ -43,7 +46,7 @@ var cldn = {
 
   showSkull: function(el, dly) {
     $(el).delay(dly).animate({top: '20%'}, 1000, function() {
-      $(this).effect('bounce', {top: '15%'}, 400);
+      //$(this).effect('bounce', {top: '15%'}, 400);
     });
 
     $(el).mouseover(function() {
