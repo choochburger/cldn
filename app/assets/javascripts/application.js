@@ -3,6 +3,7 @@
 //= require_self
 //= require_tree .
 
+/*
 (function() {
 
 var _data;
@@ -114,3 +115,4 @@ var App = {
 };
 
 })();
+*/
