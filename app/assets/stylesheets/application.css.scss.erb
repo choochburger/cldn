@@ -13,15 +13,11 @@ body {
   background-color: #000000;
   background-image: url(<%= asset_data_uri "texture.png" %>);
   color: $textColor;
-  font-family: georgia, serif;
+  font-family: Helvetica, sans-serif;
   font-size: 18px;
   margin: 0;
   padding: 0;
   @include text-shadow(rgba(111, 111, 111, 0.8) 2px 1px 1px);
-}
-
-h1 {
-  font-size: 36px;
 }
 
 a {
@@ -91,6 +87,13 @@ ul.horizontal {
 }
 
 #header {
+  h1 {
+    color: white;
+    display: inline-block;
+    font-size: 36px;
+    margin-right: 24px;
+  }
+
   .logo {
     display: inline-block;
   }
@@ -111,10 +114,11 @@ ul.horizontal {
 
   ul li {
     margin-right: 20px;
+    white-space: nowrap;
   }
 
   a {
-    color: $textColor;
+    color: #A9E4FF;
     text-decoration: none;
   }
 
