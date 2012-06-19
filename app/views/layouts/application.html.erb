@@ -8,12 +8,30 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
+  <div id="main">
+    <div id="header" class="cf">
+      <div id="logo">
+        <h1>chrislyons.net</h1>
+      </div>
+      <div id="contact">
+        <ul>
+          <li>chris[at]chrislyons.net</li>
+          <li><%= link_to "@choochburger", "http://www.twitter.com/#!/choochburger" %></li>
+        </ul>
+      </div>
+    </div> <!-- end header -->
 
- 
-  <%= yield %>
-  
-  <div id="footer"></div>
-  
-  <div id="player"></div>
+    <div id="nav">
+      <ul class="horizontal">
+        <li><a href="#dev" class="selected">Development</a></li>
+        <li>Music</li>
+        <li>Github</li>
+        <li>Sandbox</li>
+      </ul>
+    </div>
+
+    <%= yield %>
+
+  </div>
 </body>
 </html>

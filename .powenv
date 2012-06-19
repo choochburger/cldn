@@ -1,0 +1,5 @@
+
+  Usage:
+
+    rvm env [ruby_string] [--path]
+

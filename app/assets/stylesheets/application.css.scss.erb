@@ -1,0 +1,113 @@
+/*
+*= require_self
+*= require_tree .
+*/
+
+@import "compass/css3/";
+
+body {
+  background-color: #000000;
+  background-image: url(<%= asset_data_uri "texture.png" %>);
+  color: #ddd;
+  font-family: georgia, serif;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  text-shadow: 2px 1px 1px rgba(111, 111, 111, 0.8);
+}
+
+a {
+  color: orange;
+}
+
+#main {
+  margin: 0 40px;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul.horizontal {
+  padding-left: 0;
+
+  li {
+    display: inline;
+  }
+}
+
+#logo {
+  float: left;
+}
+
+#contact {
+  float: right;
+}
+
+#nav {
+  background: rgba(100,100,100,0.1);
+  padding: 0 6px;
+
+  ul li {
+    margin-right: 20px;
+  }
+
+  a {
+    color: darkkhaki;
+    text-decoration: none;
+  }
+}
+
+/* clearfix */
+/* For modern browsers */
+.cf:before,
+.cf:after {
+    content:"";
+    display:table;
+}
+
+.cf:after {
+    clear:both;
+}
+
+/* For IE 6/7 (trigger hasLayout) */
+.cf {
+    *zoom:1;
+}
+
+
+/* bottom arrow */
+
+$arrow_border: rgba(100, 100, 100, 0.5);
+
+.selected {
+	position: relative;
+	background: $arrow_border;
+	border: 3px solid $arrow_border;
+  border-radius: 8px;
+  padding: 0 4px;
+}
+
+.selected:after, .selected:before {
+	top: 100%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.selected:after {
+	border-top-color: $arrow_border;
+	border-width: 10px;
+	left: 50%;
+	margin-left: -10px;
+}
+
+.selected:before {
+	border-top-color: $arrow_border;
+	border-width: 16px;
+	left: 50%;
+	margin-left: -16px;
+}
