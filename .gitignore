@@ -8,3 +8,5 @@ db/*.sqlite3
 public/music
 public/web
 .sass-cache/
+
+.DS_Store
