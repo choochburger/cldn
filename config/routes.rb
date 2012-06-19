@@ -1,12 +1,6 @@
 Cldn::Application.routes.draw do
-  get "music/show"
-  match 'music' => 'music#show'
+  root :to => 'application#index'
 
-  get "web/show"
-  match 'web' => 'web#show'
-
-  root :to => 'home#index'
-  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
