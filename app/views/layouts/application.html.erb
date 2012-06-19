@@ -4,11 +4,10 @@
   <title>chrislyons.net</title>
   <%= stylesheet_link_tag "application" %>
   <%= javascript_include_tag "application" %>
-
   <%= csrf_meta_tag %>
 </head>
 <body>
-  <div id="main">
+  <div id="main" class="cf">
     <div id="header" class="cf">
       <div class="logo">
         <h1>chrislyons.net</h1>
@@ -17,11 +16,11 @@
 
     <div id="nav">
       <ul class="horizontal">
-        <li><%= link_to "Development", "#dev" %></a></li>
-        <li><%= link_to "Music", "#music" %></a></li>
-        <li><%= link_to "Sandbox", "#sandbox" %></a></li>
-        <li><%= link_to "Github", "http://www.github.com/choochburger", :target => "_blank" %></a></li>
-        <li><%= link_to "Contact Me", "#contact"%></a></li>
+        <li><%= link_to "development", "#dev" %></a></li>
+        <li><%= link_to "music", "#music" %></a></li>
+        <li><%= link_to "sandbox", "#sandbox" %></a></li>
+        <li><%= link_to "github", "http://www.github.com/choochburger", :target => "_blank" %></a></li>
+        <li><%= link_to "contact me", "#contact"%></a></li>
       </ul>
     </div>
 
@@ -38,6 +37,16 @@
         web: <%= @web_json %>
       }
     };
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="tiles">
+    {{#each tiles}}
+      <div class="tile" style="{{createBgUrl thumbnail_url}}">
+        <div class="description">
+          {{description}}
+        </div>
+      </div>
+    {{/each}}
   </script>
 
 </body>

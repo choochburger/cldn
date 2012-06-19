@@ -17,7 +17,7 @@ body {
   font-size: 18px;
   margin: 0;
   padding: 0;
-  text-shadow: 2px 1px 1px rgba(111, 111, 111, 0.8);
+  @include text-shadow(rgba(111, 111, 111, 0.8) 2px 1px 1px);
 }
 
 h1 {
@@ -29,7 +29,53 @@ a {
 }
 
 #main {
+  $tileHeight: 196px;
+  $tileWidth: 250px;
+
   margin: 0 40px;
+
+  .tile {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    @include box-shadow(rgba(black, 0.5) 2px 2px 2px inset);
+    @include border-radius($borderRadius);
+    cursor: pointer;
+    float: left;
+    height: $tileHeight;
+    margin: 0 36px 36px 0;
+    @include opacity(0.9);
+    @include text-shadow(rgba(0, 0, 0, 0.1) 2px 1px 1px);
+    width: $tileWidth;
+  }
+  
+  .tile:hover {
+    @include box-shadow(rgba(black, 0.5) 2px 2px 2px);
+    left: -1px;
+    @include opacity(1.0);
+    position: relative;
+    top: -1px;
+  }
+
+  .tile .description {
+    background: rgba(255, 255, 255, 0.8);
+    @include border-radius($borderRadius);
+    color: #333;
+    display: table-cell;
+    height: $tileHeight;
+    @include opacity(0);
+    padding: 2px 4px;
+    text-align: center;
+    width: $tileWidth;
+    vertical-align: middle;
+  }
+
+  .tile:hover .description {
+    @include opacity(1.0);
+  }
+
+  .ember-view {
+    display: inline-block;
+  }
 }
 
 ul li {
@@ -60,6 +106,7 @@ ul.horizontal {
 #nav {
   background: rgba(100,100,100,0.1);
   @include border-radius($borderRadius);
+  margin-bottom: 12px;
   padding: 6px;
 
   ul li {
