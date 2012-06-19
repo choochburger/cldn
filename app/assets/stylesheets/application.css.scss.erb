@@ -1,19 +1,27 @@
 /*
+*= require reset
 *= require_self
 *= require_tree .
 */
 
 @import "compass/css3/";
 
+$textColor: #ddd;
+$borderRadius: 8px;
+
 body {
   background-color: #000000;
   background-image: url(<%= asset_data_uri "texture.png" %>);
-  color: #ddd;
+  color: $textColor;
   font-family: georgia, serif;
   font-size: 18px;
   margin: 0;
   padding: 0;
   text-shadow: 2px 1px 1px rgba(111, 111, 111, 0.8);
+}
+
+h1 {
+  font-size: 36px;
 }
 
 a {
@@ -36,25 +44,35 @@ ul.horizontal {
   }
 }
 
-#logo {
-  float: left;
-}
+#header {
+  .logo {
+    display: inline-block;
+  }
 
-#contact {
-  float: right;
+  .contact {
+    font-size: 16px;
+    float: right;
+  }
+
+  margin: 4px 0 12px;
 }
 
 #nav {
   background: rgba(100,100,100,0.1);
-  padding: 0 6px;
+  @include border-radius($borderRadius);
+  padding: 6px;
 
   ul li {
     margin-right: 20px;
   }
 
   a {
-    color: darkkhaki;
+    color: $textColor;
     text-decoration: none;
+  }
+
+  a.selected {
+    color: darkkhaki;
   }
 }
 
@@ -78,13 +96,13 @@ ul.horizontal {
 
 /* bottom arrow */
 
-$arrow_border: rgba(100, 100, 100, 0.5);
+$arrowColor: rgba(100, 100, 100, 0.5);
 
 .selected {
 	position: relative;
-	background: $arrow_border;
-	border: 3px solid $arrow_border;
-  border-radius: 8px;
+	background: $arrowColor;
+	border: 3px solid $arrowColor;
+  @include border-radius($borderRadius);
   padding: 0 4px;
 }
 
@@ -99,14 +117,14 @@ $arrow_border: rgba(100, 100, 100, 0.5);
 }
 
 .selected:after {
-	border-top-color: $arrow_border;
+	border-top-color: $arrowColor;
 	border-width: 10px;
 	left: 50%;
 	margin-left: -10px;
 }
 
 .selected:before {
-	border-top-color: $arrow_border;
+	border-top-color: $arrowColor;
 	border-width: 16px;
 	left: 50%;
 	margin-left: -16px;

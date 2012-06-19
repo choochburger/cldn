@@ -10,23 +10,23 @@
 <body>
   <div id="main">
     <div id="header" class="cf">
-      <div id="logo">
+      <div class="logo">
         <h1>chrislyons.net</h1>
       </div>
-      <div id="contact">
+      <div class="contact">
         <ul>
           <li>chris[at]chrislyons.net</li>
-          <li><%= link_to "@choochburger", "http://www.twitter.com/#!/choochburger" %></li>
+          <li><%= link_to "@choochburger", "http://www.twitter.com/#!/choochburger", :target => "_blank" %></li>
         </ul>
       </div>
     </div> <!-- end header -->
 
     <div id="nav">
       <ul class="horizontal">
-        <li><a href="#dev" class="selected">Development</a></li>
-        <li>Music</li>
-        <li>Github</li>
-        <li>Sandbox</li>
+        <li><%= link_to "Development", "#dev" %></a></li>
+        <li><%= link_to "Music", "#music" %></a></li>
+        <li><%= link_to "Sandbox", "#sandbox" %></a></li>
+        <li><%= link_to "Github", "http://www.github.com/choochburger", :target => "_blank" %></a></li>
       </ul>
     </div>
 
