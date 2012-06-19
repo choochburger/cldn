@@ -6,18 +6,8 @@ class ApplicationController < ActionController::Base
     @web   = ContentItem.by_web_only
 
     # bootstrap data (no need to make API calls since this is all static)
-    @music_json = @music.map {|item| {
-      :url   => item.asset_url,
-      :title => item.title,
-      :type  => item.kind }
-    }.to_json.html_safe
-
-    @web_json = @web.map {|item| {
-      :url => item.asset_url,
-      :type => item.kind,
-      :width => item.width,
-      :height => item.height}
-    }.to_json.html_safe
+    @music_json = @music.to_json.html_safe
+    @web_json   = @web.to_json.html_safe
   end
 
 end
