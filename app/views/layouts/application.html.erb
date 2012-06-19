@@ -33,5 +33,17 @@
     <%= yield %>
 
   </div>
+
+  <!-- bootstrapped data -->
+  <script type="text/javascript">
+    var cldn = cldn || {};
+    cldn = {
+      data: {
+        music: <%= @music_json %>,
+        web: <%= @web_json %>
+      }
+    };
+  </script>
+
 </body>
 </html>

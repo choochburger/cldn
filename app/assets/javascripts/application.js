@@ -3,18 +3,17 @@
 //= require_self
 //= require_tree .
 
-(function(window) {
+(function() {
 
-var document = window.document;
 var _data;
 
 $(document).ready(function() {
-  cldn.initDescriptions();
-  cldn.initJPlayer();
+  App.initDescriptions();
+  App.initJPlayer();
   Shadowbox.init();
 });
 
-var cldn = {
+var App = {
 
   initDescriptions: function() {
 
@@ -114,7 +113,4 @@ var cldn = {
 
 };
 
-window.cldn = cldn;
-
-
-})(window);
+})();
