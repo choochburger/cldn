@@ -24,7 +24,7 @@ a {
   color: orange;
 }
 
-#main {
+#content {
   $tileHeight: 196px;
   $tileWidth: 250px;
 
@@ -68,10 +68,6 @@ a {
   .tile:hover .description {
     @include opacity(1.0);
   }
-
-  .ember-view {
-    display: inline-block;
-  }
 }
 
 ul li {
@@ -113,12 +109,14 @@ ul.horizontal {
   padding: 6px;
 
   ul li {
+    display: inline-block;
     margin-right: 20px;
     white-space: nowrap;
   }
 
   a {
     color: #A9E4FF;
+    cursor: pointer;
     text-decoration: none;
   }
 

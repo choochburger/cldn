@@ -1,6 +1,6 @@
 //= require jquery
 //= require jquery_ujs
-//= require ember-0.9.8.1.min
+//= require ember-latest
 //= require_self
 //= require_tree .
 
@@ -9,27 +9,42 @@ var App;
 $(function() {
   App = Em.Application.create();
 
-  App.Router = Ember.Router.extend({
-    root: Ember.State.extend({
-      index: Ember.State.extend({
+  App.ApplicationController = Em.Controller.extend();
+  App.ApplicationView       = Em.View.extend({templateName: 'application'});
+  App.NavController         = Em.Controller.extend();
+  App.NavView               = Em.View.extend({templateName: 'nav'});
+  App.DevController         = Em.Controller.extend({tiles: cldn.data.web});
+  App.DevView               = Em.View.extend({templateName: 'tiles'});
+  App.MusicController       = Em.Controller.extend({tiles: cldn.data.music});
+  App.MusicView             = Em.View.extend({templateName: 'tiles'});
+
+  App.Router = Em.Router.extend({
+    location: 'hash',
+    enableLogging: false,
+
+    root: Em.Route.extend({
+      index: Em.Route.extend({
         route: '/',
-        redirectsTo: 'web'
+        redirectsTo: 'dev'
       }),
-      web: Ember.State.extend({
-        route: '/web'
+      dev: Em.Route.extend({
+        route: '/dev',
+        connectOutlets: function(router, context) {
+          var appController = router.get('applicationController');
+          appController.connectOutlet('dev');
+        }
       }),
-      music: Ember.State.extend({
-        route: '/music'
+      music: Em.Route.extend({
+        route: '/music',
+        connectOutlets: function(router) {
+          var appController = router.get('applicationController');
+          appController.connectOutlet('music');
+        }
       })
     })
   });
 
-  // add some tiles. temp for styling
-  var tilesView = Ember.View.create({
-    templateName: 'tiles',
-    tiles: cldn.data.web
-  });
-  tilesView.appendTo('#main');
+  App.initialize();
 
 });
 
