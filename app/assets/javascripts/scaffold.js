@@ -13,16 +13,16 @@
       })
     };
 
-    $.each(views, function(name, data) {
+    $.each(views, function(name, opts) {
       var lowerCaseName = name.toLowerCase();
 
       // create app.NameController
-      app[name+'Controller'] = Em.Controller.extend(data.context || {});
+      app[name+'Controller'] = Em.Controller.extend(opts.controllerOpts || {});
       // create app.ViewController
-      app[name+'View'] = Em.View.extend({
+      app[name+'View'] = Em.View.extend($.extend({
         // add templateName, if provided. Otherwise, default to lowercase name
-        templateName: data.templateName || lowerCaseName
-      });
+        templateName: opts.viewOpts ? opts.viewOpts.templateName : lowerCaseName
+      }, opts.viewOpts));
       // create a root route
       routes[lowerCaseName] = Em.Route.extend({
         route: '/'+lowerCaseName,

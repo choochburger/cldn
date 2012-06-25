@@ -9,18 +9,38 @@ var App;
 $(function() {
   var rootRoutes;
 
-  App = Em.Application.create({rootElement: '#main'});
+  App = Em.Application.create({
+    rootElement: '#main'
+  });
+
+  // top navbar
+  App.NavView = Em.View.extend({
+    templateName: 'nav',
+    didInsertElement: function() {
+      var $links = $('#nav a'),
+          stateName;
+
+      $links.click(function() {
+        $links.removeClass('selected');
+        $(this).addClass('selected');
+      });
+
+      // set initial page
+      stateName = App.stateManager.get('currentState').name;
+      $('#nav a[href=#'+stateName+']').addClass('selected');
+    }
+  });
 
   rootRoutes = cldn.scaffold(App, 'dev', {
-    'Application': {}, 'Nav': {}, 'Sandbox': {}, 'About': {}, 'Contact': {},
+    'Application': {}, 'Sandbox': {}, 'About': {}, 'Contact': {},
     'Dev':   {
-      templateName: 'tiles',
-      context: {'tiles': cldn.data.dev}
+      viewOpts: {templateName: 'tiles'},
+      controllerOpts: {'tiles': cldn.data.dev}
     },
     'Music': {
-      templateName: 'tiles',
-      context: {'tiles': cldn.data.music}
-    },
+      viewOpts: {templateName: 'tiles'},
+      controllerOpts: {'tiles': cldn.data.music}
+    }
   });
 
   App.Router = Em.Router.extend({
@@ -35,17 +55,15 @@ $(function() {
 
     $el.fadeOut(500, function() {
       appController.connectOutlet(name);
-      $el.slideDown(900);
+      $el.fadeIn(900);
     });
 
     // on initial load, just add the view
     if ($el.length === 0) appController.connectOutlet(name);
   };
 
-
   // kick things off
   App.initialize();
-
 });
 
 Handlebars.registerHelper('createBgUrl', function(prop) {

@@ -120,7 +120,7 @@ ul.horizontal {
 #nav {
   background: rgba(100,100,100,0.1);
   @include border-radius($borderRadius);
-  margin-bottom: 12px;
+  margin-bottom: 18px;
   padding: 6px;
   @include text-shadow(rgba(111, 111, 111, 0.8) 2px 1px 1px);
 
@@ -206,10 +206,6 @@ $arrowColor: rgba(100, 100, 100, 0.5);
 
 .selected {
 	position: relative;
-	background: $arrowColor;
-	border: 3px solid $arrowColor;
-  @include border-radius($borderRadius);
-  padding: 0 4px;
 }
 
 .selected:after, .selected:before {
