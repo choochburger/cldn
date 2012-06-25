@@ -7,42 +7,57 @@
 var App;
 
 $(function() {
-  App = Em.Application.create({
-    rootElement: '#main'
-  });
-
-  App.ApplicationController = Em.Controller.extend();
-  App.ApplicationView       = Em.View.extend({templateName: 'application'});
-  App.NavController         = Em.Controller.extend();
-  App.NavView               = Em.View.extend({templateName: 'nav'});
-  App.DevController         = Em.Controller.extend({tiles: cldn.data.web});
-  App.DevView               = Em.View.extend({templateName: 'tiles'});
-  App.MusicController       = Em.Controller.extend({tiles: cldn.data.music});
-  App.MusicView             = Em.View.extend({templateName: 'tiles'});
+  App = Em.Application.create({rootElement: '#main'});
 
   App.Router = Em.Router.extend({
     location: 'hash',
     enableLogging: false,
+    root: Em.Route.extend(
+      App.scaffold({
+        'Application': {}, 'Nav': {}, 'Sandbox': {}, 'About': {}, 'Contact': {},
+        'Dev':   {
+          templateName: 'tiles',
+          context: {'tiles': cldn.data.web}
+        },
+        'Music': {
+          templateName: 'tiles',
+          context: {'tiles': cldn.data.music}
+        },
+      }, 'dev')
+    )
+  });
 
-    root: Em.Route.extend({
+  // App.scaffold creates:
+  //   * App.NameController for all keys
+  //   * App.NameView (using template 'name') for all keys
+  //   * Root route to 'name' for all keys
+  //
+  // App.scaffold returns:
+  //   * an object containing all root routes
+  //
+  App.scaffold = function(views, indexRoute) {
+    routes = {
       index: Em.Route.extend({
         route: '/',
-        redirectsTo: 'dev'
-      }),
-      dev: Em.Route.extend({
-        route: '/dev',
-        connectOutlets: function(router, context) {
-          App.loadView(router, 'dev');
-        }
-      }),
-      music: Em.Route.extend({
-        route: '/music',
-        connectOutlets: function(router, context) {
-          App.loadView(router, 'music');
-        }
+        redirectsTo: indexRoute
       })
-    })
-  });
+    };
+
+    $.each(views, function(name, data) {
+      var lowerCaseName = name.toLowerCase();
+
+      App[name+'Controller'] = Em.Controller.extend(data.context || {});
+      App[name+'View'] = Em.View.extend({
+        templateName: data.templateName || lowerCaseName
+      });
+      routes[lowerCaseName] = Em.Route.extend({
+        route: '/'+lowerCaseName,
+        connectOutlets: function(router, context) { App.loadView(router, lowerCaseName); }
+      });
+    });
+
+    return routes;
+  }
 
   App.loadView = function(router, name) {
     var $el = $('#content'),
@@ -57,6 +72,8 @@ $(function() {
     if ($el.length === 0) appController.connectOutlet(name);
   };
 
+
+  // kick things off
   App.initialize();
 
 });
