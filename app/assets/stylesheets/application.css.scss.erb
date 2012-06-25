@@ -17,12 +17,17 @@ body {
   font-size: 18px;
   margin: 0;
   padding: 0;
-  @include text-shadow(rgba(111, 111, 111, 0.8) 2px 1px 1px);
+  @include text-shadow(rgba(111, 111, 111, 0.4) 2px 1px 1px);
 }
 
 a {
   color: orange;
 }
+
+p {
+  margin: 2px 0 14px;
+}
+
 
 #main {
   margin: 0 40px;
@@ -73,7 +78,8 @@ a {
 }
 
 ul li {
-  list-style: none;
+  list-style: disc;
+  list-style-position: inside;
 }
 
 ul.horizontal {
@@ -81,6 +87,7 @@ ul.horizontal {
 
   li {
     display: inline;
+    list-style: none;
   }
 }
 
@@ -90,6 +97,7 @@ ul.horizontal {
     display: inline-block;
     font-size: 36px;
     margin-right: 24px;
+    @include text-shadow(rgba(111, 111, 111, 0.8) 2px 1px 1px);
   }
 
   .logo {
@@ -109,6 +117,7 @@ ul.horizontal {
   @include border-radius($borderRadius);
   margin-bottom: 12px;
   padding: 6px;
+  @include text-shadow(rgba(111, 111, 111, 0.8) 2px 1px 1px);
 
   ul li {
     display: inline-block;
@@ -128,6 +137,43 @@ ul.horizontal {
 
   a.selected {
     color: darkkhaki;
+  }
+}
+
+.about {
+  ul {
+    font-size: 14px;
+  }
+
+  ul li {
+    margin: 8px 0;
+    padding-left: 20px;
+  }
+
+  .blurb {
+    background: rgba(50, 50, 50, 0.1);
+    @include border-radius($borderRadius);
+    margin: 0 0 12px;
+    padding: 8px;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .me {
+    background-image: url(<%= asset_data_uri "me.png" %>);
+    background-size: 100%;
+    float: left;
+    @include border-radius($borderRadius);
+    @include box-shadow(rgba(black, 0.5) 2px 2px 2px inset);
+    height: 140px;
+    margin: 0 12px 0 0;
+    width: 108px;
+  }
+
+  .description {
+    padding-top: 42px;
   }
 }
 
