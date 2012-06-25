@@ -7,33 +7,36 @@
 var App;
 
 $(function() {
+  var rootRoutes;
+
   App = Em.Application.create({rootElement: '#main'});
+
+  rootRoutes = App.scaffold({
+    'Application': {}, 'Nav': {}, 'Sandbox': {}, 'About': {}, 'Contact': {},
+    'Dev':   {
+      templateName: 'tiles',
+      context: {'tiles': cldn.data.web}
+    },
+    'Music': {
+      templateName: 'tiles',
+      context: {'tiles': cldn.data.music}
+    },
+  }, 'dev')
 
   App.Router = Em.Router.extend({
     location: 'hash',
     enableLogging: false,
-    root: Em.Route.extend(
-      App.scaffold({
-        'Application': {}, 'Nav': {}, 'Sandbox': {}, 'About': {}, 'Contact': {},
-        'Dev':   {
-          templateName: 'tiles',
-          context: {'tiles': cldn.data.web}
-        },
-        'Music': {
-          templateName: 'tiles',
-          context: {'tiles': cldn.data.music}
-        },
-      }, 'dev')
-    )
+    root: Em.Route.extend(rootRoutes)
   });
 
+  // @param {Object} views  An object containing view names as keys with optional templateName and context params tacked on
+  // @param {String} indexRoute
+  // @return {Object} Returns an object containing all root routes
+  //
   // App.scaffold creates:
   //   * App.NameController for all keys
   //   * App.NameView (using template 'name') for all keys
   //   * Root route to 'name' for all keys
-  //
-  // App.scaffold returns:
-  //   * an object containing all root routes
   //
   App.scaffold = function(views, indexRoute) {
     routes = {
