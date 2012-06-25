@@ -14,49 +14,7 @@
       </div>
     </div> <!-- end header -->
     
-    <script type="text/x-handlebars" data-template-name="application">
-      {{view App.NavView controllerBinding="controller.controllers.navController"}}
-      <div id="content" class="cf">
-        {{outlet}}
-      </div>
-    </script>
-
-    <script type="text/x-handlebars" data-template-name="nav">
-      <div id="nav">
-        <ul class="horizontal">
-          <li><%= link_to "DEVELOPMENT", "#dev" %></a></li>
-          <li><%= link_to "MUSIC", "#music" %></a></li>
-          <li><%= link_to "BLOG", "http://blog.chrislyons.net", :target => "_blank" %></a></li>
-          <li><%= link_to "GITHUB", "http://www.github.com/choochburger", :target => "_blank" %></a></li>
-          <li><%= link_to "SANDBOX", "#sandbox" %></a></li>
-          <li><%= link_to "ABOUT", "#about"%></a></li>
-          <li><%= link_to "CONTACT", "#contact"%></a></li>
-        </ul>
-      </div>
-    </script>
-
-    <script type="text/x-handlebars" data-template-name="tiles">
-      {{#each tiles}}
-        <div class="tile" style="{{createBgUrl thumbnail_url}}">
-          <div class="description">
-            {{description}}
-          </div>
-        </div>
-      {{/each}}
-    </script>
-
-  </div>
-
-  <!-- bootstrapped data -->
-  <script type="text/javascript">
-    var cldn = cldn || {};
-    cldn = {
-      data: {
-        music: <%= @music_json %>,
-        web: <%= @web_json %>
-      }
-    };
-  </script>
+    <%= yield %>
 
 </body>
 </html>
