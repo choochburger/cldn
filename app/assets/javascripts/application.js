@@ -21,7 +21,7 @@ $(function() {
       templateName: 'tiles',
       context: {'tiles': cldn.data.music}
     },
-  }, 'dev')
+  }, 'dev');
 
   App.Router = Em.Router.extend({
     location: 'hash',
