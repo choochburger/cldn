@@ -21,11 +21,13 @@
 
 <script type="text/x-handlebars" data-template-name="tiles">
   {{#each tiles}}
-    <div class="tile" style="{{createBgUrl thumbnail_url}}">
-      <div class="description">
-        {{description}}
+    <a class="fancybox" href="{{url asset_url}}" rel="group">
+      <div class="tile" style="{{createBgUrl thumbnail_url}}">
+        <div class="description">
+          {{description}}
+        </div>
       </div>
-    </div>
+    </a>
   {{/each}}
 </script>
 

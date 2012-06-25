@@ -1,6 +1,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require ember-latest
+//= require jquery.fancybox
+//= require jquery.fancybox.pack
 //= require_self
 //= require_tree .
 
@@ -55,11 +57,16 @@ $(function() {
 
     $el.fadeOut(300, function() {
       appController.connectOutlet(name);
-      $el.fadeIn(400);
+      $el.fadeIn(400, function() {
+        $('.fancybox').fancybox();
+      });
     });
 
     // on initial load, just add the view
-    if ($el.length === 0) appController.connectOutlet(name);
+    if ($el.length === 0) {
+      appController.connectOutlet(name);
+      $('.fancybox').fancybox();
+    }
   };
 
   // kick things off
@@ -69,4 +76,9 @@ $(function() {
 Handlebars.registerHelper('createBgUrl', function(prop) {
   var path = Ember.getPath(this, prop);
   return 'background-image: url(\''+path+'\');';
+});
+
+Handlebars.registerHelper('url', function(prop) {
+  var path = Ember.getPath(this, prop);
+  return path;
 });
