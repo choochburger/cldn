@@ -7,7 +7,9 @@
 var App;
 
 $(function() {
-  App = Em.Application.create();
+  App = Em.Application.create({
+    rootElement: '#main'
+  });
 
   App.ApplicationController = Em.Controller.extend();
   App.ApplicationView       = Em.View.extend({templateName: 'application'});
@@ -30,19 +32,30 @@ $(function() {
       dev: Em.Route.extend({
         route: '/dev',
         connectOutlets: function(router, context) {
-          var appController = router.get('applicationController');
-          appController.connectOutlet('dev');
+          App.loadView(router, 'dev');
         }
       }),
       music: Em.Route.extend({
         route: '/music',
-        connectOutlets: function(router) {
-          var appController = router.get('applicationController');
-          appController.connectOutlet('music');
+        connectOutlets: function(router, context) {
+          App.loadView(router, 'music');
         }
       })
     })
   });
+
+  App.loadView = function(router, name) {
+    var $el = $('#content'),
+        appController = router.get('applicationController');
+
+    $el.fadeOut(500, function() {
+      appController.connectOutlet(name);
+      $el.slideDown(900);
+    });
+
+    // on initial load, just add the view
+    if ($el.length === 0) appController.connectOutlet(name);
+  };
 
   App.initialize();
 
