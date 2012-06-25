@@ -53,9 +53,9 @@ $(function() {
     var $el = $('#content'),
         appController = router.get('applicationController');
 
-    $el.fadeOut(500, function() {
+    $el.fadeOut(300, function() {
       appController.connectOutlet(name);
-      $el.fadeIn(900);
+      $el.fadeIn(400);
     });
 
     // on initial load, just add the view
