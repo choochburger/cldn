@@ -21,7 +21,7 @@
 
 <script type="text/x-handlebars" data-template-name="tiles">
   {{#each tiles}}
-    <a class="fancybox" href="{{url asset_url}}" rel="group">
+    <a href="{{url asset_url}}" rel="{{shadowboxProps}}">
       <div class="tile" style="{{createBgUrl thumbnail_url}}">
         <div class="description">
           {{description}}

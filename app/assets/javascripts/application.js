@@ -73,6 +73,14 @@ Handlebars.registerHelper('createBgUrl', function(prop) {
   return 'background-image: url(\''+path+'\');';
 });
 
+Handlebars.registerHelper('shadowboxProps', function() {
+  var props;
+  props  = 'shadowbox;';
+  props += 'width='+this.width+'px;';
+  props += 'height='+this.height+'px;';
+  return props;
+});
+
 Handlebars.registerHelper('url', function(prop) {
   var path = Ember.getPath(this, prop);
   return path;
