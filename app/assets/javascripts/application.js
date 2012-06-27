@@ -1,8 +1,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require ember-latest
-//= require jquery.fancybox
-//= require jquery.fancybox.pack
+//= require shadowbox
 //= require_self
 //= require_tree .
 
@@ -71,6 +70,7 @@ $(function() {
 
   // kick things off
   App.initialize();
+  Shadowbox.init();
 });
 
 Handlebars.registerHelper('createBgUrl', function(prop) {
