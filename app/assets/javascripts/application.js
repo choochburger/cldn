@@ -32,7 +32,20 @@ $(function() {
     }
   });
 
-  rootRoutes = cldn.scaffold(App, 'dev', {
+  App.loadView = function(router, name) {
+    var $el = $('#content'),
+        appController = router.get('applicationController');
+
+    $el.fadeOut(300, function() {
+      appController.connectOutlet(name);
+      $el.fadeIn(400);
+    });
+
+    // on initial load, just add the view
+    if ($el.length === 0) appController.connectOutlet(name);
+  };
+
+  rootRoutes = cldn.scaffold(App, 'dev', App.loadView, {
     'Application': {}, 'Sandbox': {}, 'About': {}, 'Contact': {},
     'Dev':   {
       viewOpts: {templateName: 'tiles'},
@@ -49,24 +62,6 @@ $(function() {
     enableLogging: false,
     root: Em.Route.extend(rootRoutes)
   });
-
-  App.loadView = function(router, name) {
-    var $el = $('#content'),
-        appController = router.get('applicationController');
-
-    $el.fadeOut(300, function() {
-      appController.connectOutlet(name);
-      $el.fadeIn(400, function() {
-        $('.fancybox').fancybox();
-      });
-    });
-
-    // on initial load, just add the view
-    if ($el.length === 0) {
-      appController.connectOutlet(name);
-      $('.fancybox').fancybox();
-    }
-  };
 
   // kick things off
   App.initialize();

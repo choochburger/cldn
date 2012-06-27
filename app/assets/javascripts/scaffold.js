@@ -5,7 +5,7 @@
    * @param  {Object} views  An object containing view names as keys with optional templateName and context params tacked on
    * @return {Object} Returns an object containing all root routes
    **/
-  cldn.scaffold = function(app, indexRoute, views) {
+  cldn.scaffold = function(app, indexRoute, connectOutletFunc, views) {
     routes = {
       index: Em.Route.extend({
         route: '/',
@@ -26,7 +26,9 @@
       // create a root route
       routes[lowerCaseName] = Em.Route.extend({
         route: '/'+lowerCaseName,
-        connectOutlets: function(router, context) { app.loadView(router, lowerCaseName); }
+        connectOutlets: function(router, context) {
+          connectOutletFunc.call(this, router, lowerCaseName);
+        }
       });
     });
 
