@@ -50,14 +50,28 @@ $(function() {
     'Dev':   {
       viewOpts: {
         templateName: 'tiles',
-        click: function(e) {
-          console.log(e);
+        showContent: function(e) {
+          var thumb = e.context,
+              playerTypes = { image:'img', video: 'qt', flash: 'swf', audio: 'jp', link: 'iframe' };
+
+          Shadowbox.open({
+            content: thumb.asset_url,
+            title:   thumb.title,
+            width:   thumb.width,
+            height:  thumb.height,
+            player:  playerTypes[thumb.kind]
+          });
         }
       },
       controllerOpts: {'tiles': cldn.data.dev}
     },
     'Music': {
-      viewOpts: {templateName: 'tiles'},
+      viewOpts: {
+        templateName: 'tiles',
+        showContent: function(e) {
+          console.log('show jplayer');
+        }
+      },
       controllerOpts: {'tiles': cldn.data.music}
     }
   });
@@ -76,14 +90,6 @@ $(function() {
 Handlebars.registerHelper('createBgUrl', function(prop) {
   var path = Ember.getPath(this, prop);
   return 'background-image: url(\''+path+'\');';
-});
-
-Handlebars.registerHelper('shadowboxProps', function() {
-  var props;
-  props  = 'shadowbox;';
-  props += 'width='+this.width+'px;';
-  props += 'height='+this.height+'px;';
-  return props;
 });
 
 Handlebars.registerHelper('url', function(prop) {
