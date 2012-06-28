@@ -48,7 +48,12 @@ $(function() {
   rootRoutes = cldn.scaffold(App, 'dev', App.loadView, {
     'Application': {}, 'Sandbox': {}, 'About': {}, 'Contact': {},
     'Dev':   {
-      viewOpts: {templateName: 'tiles'},
+      viewOpts: {
+        templateName: 'tiles',
+        click: function(e) {
+          console.log(e);
+        }
+      },
       controllerOpts: {'tiles': cldn.data.dev}
     },
     'Music': {
