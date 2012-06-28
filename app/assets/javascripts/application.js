@@ -54,6 +54,8 @@ $(function() {
           var thumb = e.context,
               playerTypes = { image:'img', video: 'qt', flash: 'swf', audio: 'jp', link: 'iframe' };
 
+          e.preventDefault();
+
           Shadowbox.open({
             content: thumb.asset_url,
             title:   thumb.title,
@@ -69,6 +71,7 @@ $(function() {
       viewOpts: {
         templateName: 'tiles',
         showContent: function(e) {
+          e.preventDefault();
           console.log('show jplayer');
         }
       },
