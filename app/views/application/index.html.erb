@@ -21,7 +21,7 @@
 
 <script type="text/x-handlebars" data-template-name="tiles">
   {{#each tiles}}
-    <a href="#" {{action "showContent" on="click" target="parentView"}}>
+    <a href="#" {{action "showContent" on="click" target="content"}}>
       <div class="tile" style="{{createBgUrl thumbnail_url}}">
         <div class="description">
           {{description}}
