@@ -1,8 +1,9 @@
 (function() {
   /**
-   * @param  {Object} app  A reference to the ember app to attach to
-   * @param  {String} indexRoute
-   * @param  {Object} views  An object containing view names as keys with optional templateName and context params tacked on
+   * @param  {Object}   app  A reference to the ember app to attach to
+   * @param  {String}   indexRoute
+   * @param  {Function} connectOutletFunc  The function to call when the outlet is connected
+   * @param  {Object}   views  An object containing view names as keys with optional templateName and context params tacked on
    * @return {Object} Returns an object containing all root routes
    **/
   cldn.scaffold = function(app, indexRoute, connectOutletFunc, views) {
