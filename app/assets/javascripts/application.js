@@ -1,7 +1,6 @@
 //= require jquery
 //= require jquery_ujs
-//= require ember-latest
-//= require shadowbox
+//= require_tree ../../../vendor/assets/javascripts/.
 //= require_self
 //= require_tree .
 
@@ -41,6 +40,11 @@ $(function() {
       $el.fadeIn(400);
     });
 
+    $('#jp_container_1').animate({
+      bottom: '-100px'
+    }, 500);
+    $('#jquery_jplayer_1').jPlayer('stop');
+
     // on initial load, just add the view
     if ($el.length === 0) appController.connectOutlet(name);
   };
@@ -71,8 +75,22 @@ $(function() {
       viewOpts: {
         templateName: 'tiles',
         showContent: function(e) {
+          var thumb   = e.context,
+              $player = $('#jquery_jplayer_1');
+
           e.preventDefault();
-          console.log('show jplayer');
+
+          $player.jPlayer('clearMedia');
+          $player.jPlayer('setMedia', {
+            mp3: thumb.asset_url
+          });
+
+          $player.jPlayer('play');
+          $('#jp_container_1').animate({
+            bottom: '0px'
+          }, 750);
+
+          $('#song_title').text(thumb.title);
         }
       },
       controllerOpts: {'tiles': cldn.data.music}
@@ -84,6 +102,18 @@ $(function() {
     enableLogging: false,
     root: Em.Route.extend(rootRoutes)
   });
+
+  // jplayer
+	$("#jquery_jplayer_1").jPlayer({
+    autoHide: {
+      fadeIn: 500,
+      fadeOut: 800
+    },
+    cssSelectorAncestor: '#jp_container_1',
+		swfPath: "assets",
+		supplied: "mp3",
+	});
+
 
   // kick things off
   App.initialize();

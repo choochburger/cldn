@@ -1,6 +1,6 @@
 /*
 *= require reset
-*= require shadowbox/shadowbox
+*= require_tree ../../../vendor/assets/stylesheets/.
 *= require_self
 *= require_tree .
 */
@@ -242,4 +242,26 @@ $arrowColor: rgba(100, 100, 100, 0.5);
 	border-width: 16px;
 	left: 50%;
 	margin-left: -16px;
+}
+
+/* jplayer */
+#jp_container_1 {
+  bottom: 0;
+  position: fixed;
+  right: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+#song_title {
+  color: #efefef;
+  font-size: 16px;
+  left: 430px;
+  position: absolute;
+  top: 22px;
+}
+
+#jplayer_spacer {
+  display: block;
+  height: 100px;
 }
