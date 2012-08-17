@@ -94,6 +94,8 @@ GEM
     rake (0.9.2.2)
     rdoc (3.12)
       json (~> 1.4)
+    rvm-capistrano (1.2.5)
+      capistrano (>= 2.0.0)
     sass (3.1.19)
     sass-rails (3.2.5)
       railties (~> 3.2.0)
@@ -119,10 +121,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  capistrano
   compass-rails
   jquery-rails
   rails (= 3.2.0)
+  rvm-capistrano
   sass-rails
   sqlite3
   uglifier

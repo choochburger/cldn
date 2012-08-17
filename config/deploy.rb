@@ -1,4 +1,4 @@
-require "bundler/capistrano"
+require "rvm/capistrano"
 
 set :user, "choochburger"
 set :domain, "chrislyons.net"
