@@ -117,7 +117,10 @@ $(function() {
 
   // kick things off
   App.initialize();
-  Shadowbox.init();
+  Shadowbox.init({
+    skipSetup: true,
+    overlayOpacity: 1.0
+  });
 });
 
 Handlebars.registerHelper('createBgUrl', function(prop) {
