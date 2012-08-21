@@ -5,6 +5,7 @@ set :domain, "chrislyons.net"
 set :applicationdir, "/srv/www/staging.chrislyons.net/cldn/"
 
 set :rvm_type, :system
+set :rvm_ruby_string, ENV['GEM_HOME'].gsub(/.*\//,"") # Read from local system
 
 set :application, "cldn"
 set :repository,  "https://github.com/choochburger/cldn.git"
