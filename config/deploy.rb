@@ -4,6 +4,8 @@ set :user, "choochburger"
 set :domain, "chrislyons.net"
 set :applicationdir, "/srv/www/staging.chrislyons.net/cldn/"
 
+set :rvm_type, :system
+
 set :application, "cldn"
 set :repository,  "https://github.com/choochburger/cldn.git"
 
