@@ -19,7 +19,7 @@ Cldn::Application.configure do
   # just comment this out and Rails will serve the files
 
   # See everything in the log (default is :info)
-  config.log_level = :debug
+  # config.log_level = :debug
 
   # Use a different logger for distributed setups
   # config.logger = SyslogLogger.new
@@ -48,7 +48,7 @@ Cldn::Application.configure do
   config.active_support.deprecation = :notify
 
   # Compress JavaScript and CSS
-  config.assets.compress = true
+  config.assets.compress = false
 
   # Don't fallback to assets pipeline
   config.assets.compile = false
