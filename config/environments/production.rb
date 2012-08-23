@@ -48,7 +48,7 @@ Cldn::Application.configure do
   config.active_support.deprecation = :notify
 
   # Compress JavaScript and CSS
-  config.assets.compress = false
+  config.assets.compress = true
 
   # Don't fallback to assets pipeline
   config.assets.compile = false
