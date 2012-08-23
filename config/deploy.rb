@@ -23,7 +23,7 @@ ssh_options[:keys] = %w(/Users/chrislyons/.ssh/id_rsa)
 default_run_options[:pty] = true
 
 # if you want to clean up old releases on each deploy uncomment this:
-# after "deploy:restart", "deploy:cleanup"
+after "deploy:restart", "deploy:cleanup"
 
 # if you're still using the script/reaper helper you will need
 # these http://github.com/rails/irs_process_scripts
@@ -36,6 +36,11 @@ namespace :deploy do
 
   task :stop, :roles => :app do
     # Do nothing.
+  end
+
+  desc "reload the database with seed data"
+  task :seed do
+    run "cd #{current_path}; bundle exec rake db:seed RAILS_ENV=#{rails_env}"
   end
 
   desc "Restart Application"

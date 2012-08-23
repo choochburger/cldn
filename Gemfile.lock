@@ -122,6 +122,7 @@ PLATFORMS
 
 DEPENDENCIES
   compass-rails
+  highline
   jquery-rails
   rails (= 3.2.0)
   rvm-capistrano
