@@ -2,24 +2,29 @@ require "rvm/capistrano"
 
 load "deploy/assets"
 
+task :production do
+  set :applicationdir, "/srv/www/chrislyons.net/cldn/"
+  set :shared_path, "/srv/www/chrislyons.net/cldn/shared"
+  set :deploy_to, "/srv/www/chrislyons.net/cldn/"
+end
+
+task :staging do
+  set :applicationdir, "/srv/www/staging.chrislyons.net/cldn/"
+  set :shared_path, "/srv/www/staging.chrislyons.net/cldn/shared"
+  set :deploy_to, "/srv/www/staging.chrislyons.net/cldn/"
+end
+
 set :user, "choochburger"
 set :domain, "chrislyons.net"
-set :applicationdir, "/srv/www/staging.chrislyons.net/cldn/"
-set :shared_path, "/srv/www/staging.chrislyons.net/cldn/shared"
-
 set :rvm_type, :system
-
 set :application, "cldn"
 set :repository,  "https://github.com/choochburger/cldn.git"
-
 set :scm, "git"
+set :deploy_via, :export
 
 role :web, "chrislyons.net"                          # Your HTTP server, Apache/etc
 role :app, "chrislyons.net"                          # This may be the same as your `Web` server
 role :db,  "chrislyons.net", :primary => true # This is where Rails migrations will run
-
-set :deploy_to, "/srv/www/staging.chrislyons.net/cldn/"
-set :deploy_via, :export
 
 ssh_options[:keys] = %w(/Users/chrislyons/.ssh/id_rsa)
 
