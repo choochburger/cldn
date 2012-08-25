@@ -1,5 +1,7 @@
 require "rvm/capistrano"
 
+load "deploy/assets"
+
 set :user, "choochburger"
 set :domain, "chrislyons.net"
 set :applicationdir, "/srv/www/staging.chrislyons.net/cldn/"
