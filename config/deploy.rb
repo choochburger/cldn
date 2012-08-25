@@ -30,6 +30,10 @@ ssh_options[:keys] = %w(/Users/chrislyons/.ssh/id_rsa)
 
 default_run_options[:pty] = true
 
+
+# symlink large assets
+before "deploy:restart", "deploy:symlink_assets"
+
 # if you want to clean up old releases on each deploy uncomment this:
 after "deploy:restart", "deploy:cleanup"
 
@@ -51,9 +55,11 @@ namespace :deploy do
     end
   end
 
-  desc "reload the database with seed data"
-  task :seed do
-    run "cd #{current_path}; bundle exec rake db:seed RAILS_ENV=#{rails_env}"
+  desc "symlinks to large assets"
+  task :symlink_assets do
+    run "cd #{current_release}/public/; ln -s /srv/www/cldn_assets/music/"
+    run "cd #{current_release}/public/; ln -s /srv/www/cldn_assets/web/"
+    run "cd #{current_release}/public/; ln -s /srv/www/cldn_assets/images/"
   end
 
   task :stop, :roles => :app do
