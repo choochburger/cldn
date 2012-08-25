@@ -5,6 +5,7 @@ load "deploy/assets"
 set :user, "choochburger"
 set :domain, "chrislyons.net"
 set :applicationdir, "/srv/www/staging.chrislyons.net/cldn/"
+set :shared_path, "/srv/www/staging.chrislyons.net/cldn/shared"
 
 set :rvm_type, :system
 
@@ -36,17 +37,13 @@ namespace :deploy do
     run "touch #{current_release}/tmp/restart.txt"
   end
 
-  desc "precompile locally"
-  task :precompile do
-    run_locally("rm -rf public/assets/*")
-    run_locally("bundle exec rake assets:precompile")
-    servers = find_servers_for_task(current_task)
-    port_option = port ? " -e 'ssh -p #{port}' " : ''
-    servers.each do |server|
-      run_locally("rsync --recursive --times --rsh=ssh --compress --
-human-readable #{port_option} --progress public/assets #{user}
-@#{server}:#{shared_path}")
-     end
+  namespace :assets do
+    desc 'Run the precompile task locally and rsync with shared'
+    task :precompile, :roles => :web, :except => { :no_release => true } do
+      %x{bundle exec rake assets:precompile}
+      %x{rsync --recursive --times --rsh=ssh --compress --human-readable --progress public/assets #{user}@#{domain}:#{shared_path}}
+      %x{bundle exec rake assets:clean}
+    end
   end
 
   desc "reload the database with seed data"
