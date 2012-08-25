@@ -17,7 +17,7 @@ $(function() {
   App.NavView = Em.View.extend({
     templateName: 'nav',
     didInsertElement: function() {
-      var $links = $('#nav a'),
+      var $links = $('#nav a[target!="_blank"]'),
           stateName;
 
       $links.click(function() {
