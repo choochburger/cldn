@@ -119,7 +119,7 @@ $(function() {
   App.initialize();
   Shadowbox.init({
     skipSetup: true,
-    overlayOpacity: 1.0
+    overlayOpacity: 0.8
   });
 });
 
