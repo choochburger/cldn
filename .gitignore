@@ -1,12 +1,6 @@
-.bundle
-log/*.log
-tmp/
 .DS_Store
 *.swp
 *.swo
-db/*.sqlite3
 public/music
 public/web
 .sass-cache/
-
-.DS_Store
