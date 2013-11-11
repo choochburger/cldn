@@ -1,8 +1,10 @@
-chrislyons.net is now riding the rails. choo chooooo, bitch!
+chrislyons.net is now riding ~~the rails~~ express... or something.
 
+```
    _____                 . . . . . o o o o o
   __|[_]|__ ___________ _______    ____      o
  |[] [] []| [] [] [] [] [_____(__  ][]]_n_n__][.
 _|________|_[_________]_[________]_|__|__cldn__)<
   oo    oo 'oo      oo ' oo    oo 'oo 0000---oo\_
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ ```
