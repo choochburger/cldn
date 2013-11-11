@@ -50,7 +50,7 @@ $(function() {
         templateName: 'tiles',
         showContent: function(e) {
           var thumb = e.context,
-              playerTypes = { image:'img', video: 'qt', flash: 'swf', link: 'iframe' };
+              playerTypes = { image: 'img', video: 'qt', flash: 'swf', link: 'iframe' };
 
           e.preventDefault();
 
