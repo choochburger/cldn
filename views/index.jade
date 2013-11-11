@@ -122,5 +122,8 @@ block content
   #jplayer_spacer
 
   // bootstrapped data 
-  script(type='text/javascript', src='/javascripts/data.js')
+  script(type='text/javascript')
+    window.cldn = window.cldn || { data: {} };
+  script(type='text/javascript', src='/javascripts/data/music.js')
+  script(type='text/javascript', src='/javascripts/data/dev.js')
   script(type='text/javascript', src='/javascripts/app.js')
