@@ -11,37 +11,37 @@ cldn.data.dev = [{
     "update_at": null,
     "width": 800
   }, {
-    "asset_url": "http://www.chrislyons.net/web/tool_game/tool_game.mov",
+    "asset_url": "//www.youtube.com/embed/lf9TCX1nDkA",
     "category": "web",
     "create_at": null,
     "description": "A game developed for the Berkleemusic.com Finale course. Students play as a conductor who must fire cannons at enemy notation to reinforce course concepts.",
-    "height": 564,
+    "height": 315,
     "id": 2,
-    "kind": "video",
+    "kind": "link",
     "thumbnail_url": "http://www.chrislyons.net/web/tool_game/tool_game.png",
     "title": "Finale Tool Game",
     "update_at": null,
-    "width": 504
+    "width": 420
   }, {
-    "asset_url": "http://www.chrislyons.net/web/lenz/lenz.mov",
+    "asset_url": "//www.youtube.com/embed/IXoNrE0AOPA",
     "category": "web",
     "create_at": null,
     "description": "Full flash site for a major Canadian production house. Built using Flash, Actionscript 3, and XML.",
-    "height": 360,
+    "height": 315,
     "id": 3,
-    "kind": "video",
+    "kind": "link",
     "thumbnail_url": "http://www.chrislyons.net/web/lenz/lenz.png",
     "title": "Lenz Entertainment",
     "update_at": null,
-    "width": 480
+    "width": 420
   }, {
-    "asset_url": "http://www.chrislyons.net/web/lms_recorder/video-recorder-tutorial.mp4",
+    "asset_url": "//www.youtube.com/embed/Ln08Foxizn8",
     "category": "web",
     "create_at": null,
     "description": "An in-browser audio and<br>video recorder for Berkleemusic.com. Built using Flash, Javascript, and Red5 <br><small>(video overview \u00a9 Berklee Media)</small>",
     "height": 356,
     "id": 4,
-    "kind": "video",
+    "kind": "link",
     "thumbnail_url": "http://www.chrislyons.net/web/lms_recorder/lms_recorder.png",
     "title": "Audio/Video Recorder",
     "update_at": null,
@@ -83,40 +83,28 @@ cldn.data.dev = [{
     "update_at": null,
     "width": 885
   }, {
-    "asset_url": "http://www.chrislyons.net/web/falling_text/falling_text.mov",
+    "asset_url": "//www.youtube.com/embed/UyPgAu1LW1s",
     "category": "web",
     "create_at": null,
     "description": "An RSS feed screensaver for ABC/Disney. Features custom text explosion!",
-    "height": 310,
+    "height": 315,
     "id": 10,
-    "kind": "video",
+    "kind": "link",
     "thumbnail_url": "http://www.chrislyons.net/web/falling_text/falling_text.png",
     "title": "Falling Text",
     "update_at": null,
-    "width": 414
+    "width": 420
   }, {
-    "asset_url": "http://www.chrislyons.net/web/popcorn/popcorn.mov",
+    "asset_url": "//www.youtube.com/embed/tKmK7HEKCP4",
     "category": "web",
     "create_at": null,
     "description": "Another RSS feed screensaver prototype for Disney/ABC.",
     "height": 310,
     "id": 12,
-    "kind": "video",
+    "kind": "link",
     "thumbnail_url": "http://www.chrislyons.net/web/popcorn/popcorn.png",
     "title": "Popcorn",
     "update_at": null,
     "width": 414
-  }, {
-    "asset_url": "http://www.chrislyons.net/web/merril_lynch/ml_small.mov",
-    "category": "web",
-    "create_at": null,
-    "description": "A micro-site for one of the \"world's leading financial management and advisory companies.",
-    "height": 360,
-    "id": 13,
-    "kind": "video",
-    "thumbnail_url": "http://www.chrislyons.net/web/merril_lynch/merrill_lynch.png",
-    "title": "Merrill Lynch",
-    "update_at": null,
-    "width": 640
   }
 ];
