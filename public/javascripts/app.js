@@ -98,15 +98,26 @@ $(function() {
   });
 
   // jplayer
-	$("#jquery_jplayer_1").jPlayer({
-    autoHide: {
-      fadeIn: 500,
-      fadeOut: 800
-    },
-    cssSelectorAncestor: '#jp_container_1',
-		swfPath: "assets",
-		supplied: "mp3",
-	});
+  $('#jquery_jplayer_1')
+    .jPlayer({
+      autoHide: {
+        fadeIn: 500,
+        fadeOut: 800
+      },
+      cssSelectorAncestor: '#jp_container_1',
+      swfPath: 'javascripts/lib',
+      supplied: 'mp3',
+      ready: function(e) {
+        $('.flash-warning').hide();
+      }
+    })
+    .on($.jPlayer.event.error, function(e) {
+      var error = e.jPlayer.error;
+      if (error.type === 'e_flash') {
+        $('.flash-warning').show();
+      }
+    });
+
 
 
   // kick things off
