@@ -90,6 +90,8 @@ block content
       </div>
     #jquery_jplayer_1.jp-jplayer
     #jp_container_1.jp-audio
+      .flash-warning(style='display: none')
+        | This browser requires the Flash plugin to play MP3 audio. Please enable it to listen.
       .jp-type-playlist
         .jp-gui.jp-interface
           ul.jp-controls
@@ -130,7 +132,7 @@ block content
 
   script(type='text/javascript', src='/javascripts/lib/jquery.js')
   script(type='text/javascript', src='/javascripts/lib/ember-latest.js')
-  script(type='text/javascript', src='/javascripts/lib/jquery.jplayer.min.js')
+  script(type='text/javascript', src='/javascripts/lib/jquery.jplayer.js')
   script(type='text/javascript', src='/javascripts/lib/shadowbox.js')
 
   script(type='text/javascript', src='/javascripts/app.js')
