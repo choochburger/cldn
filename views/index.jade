@@ -8,32 +8,36 @@ block content
     //
        end header 
     script(type='text/x-handlebars', data-template-name='application')
-      {{view App.NavView controllerBinding="controller.controllers.navController"}}
-      <div id="content" class="cf">
-      {{outlet}}
-      </div>
+      {{view App.NavView}}
+      <div id="content" class="cf">{{outlet}}</div>
+
     script(type='text/x-handlebars', data-template-name='nav')
       <div id="nav">
       <ul class="horizontal">
       <li><a href="#dev">DEVELOPMENT</a></a></li>
       <li><a href="#music">MUSIC</a></a></li>
-      <li><a href="http://codepen.io/choochburger" target="_blank">SANDBOX</a></a></li>
       <li><a href="#about">ABOUT</a></a></li>
       <li class="divider"><a href="#contact">CONTACT</a></a></li>
       <li><a href="http://blog.chrislyons.net" target="_blank">BLOG</a></a></li>
+      <li><a href="http://codepen.io/choochburger" target="_blank">CODEPEN</a></a></li>
       <li><a href="http://www.github.com/choochburger" target="_blank">GITHUB</a></a></li>
       </ul>
       </div>
-    script(type='text/x-handlebars', data-template-name='tiles')
-      {{#each tiles}}
+
+    script(type='text/x-handlebars', data-template-name='tile')
       <a href="#" {{action "showContent" on="click" target="content"}}>
-      <div class="tile" style="{{createBgUrl thumbnail_url}}">
+      <div class="tile" style="background-image: url('{{unbound tile.thumbnail_url}}');">
       <div class="description">
-      {{{description}}}
+      {{{tile.description}}}
       </div>
       </div>
       </a>
-      {{/each}}
+
+    script(type='text/x-handlebars', data-template-name='tiles')
+      | {{#each tile in content}}
+      |   {{view App.TileView}}
+      | {{/each}}
+
     script(type='text/x-handlebars', data-template-name='about')
       <div class="about">
       <div class="blurb">
@@ -137,4 +141,3 @@ block content
   script(type='text/javascript', src='/javascripts/lib/shadowbox.js')
 
   script(type='text/javascript', src='/javascripts/app.js')
-  script(type='text/javascript', src='/javascripts/scaffold.js')
