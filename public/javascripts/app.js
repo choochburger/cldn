@@ -37,6 +37,29 @@ $(function() {
   App.DevRoute = Ember.Route.extend({
     setupController: function(controller) {
       controller.set('model', cldn.data.dev);
+    },
+  });
+
+  App.DevController = Ember.ObjectController.extend({
+    actions: {
+      showContent: function(item) {
+        var playerTypes = {
+          image: 'img',
+          video: 'qt',
+          flash: 'swf',
+          link:  'iframe'
+        };
+
+        Shadowbox.open({
+          content: item.asset_url,
+          title:   item.title,
+          width:   item.width,
+          height:  item.height,
+          player:  playerTypes[item.kind]
+        });
+
+        $('#jquery_jplayer_1').jPlayer('stop');
+      }
     }
   });
 
@@ -50,75 +73,26 @@ $(function() {
     }
   });
 
+  App.MusicController = Ember.ObjectController.extend({
+    actions: {
+      showContent: function(item) {
+        var $player = $('#jquery_jplayer_1');
+
+        $player.jPlayer('clearMedia');
+        $player.jPlayer('setMedia', {
+          mp3: item.asset_url
+        });
+        $player.jPlayer('play');
+
+        $('#jp_container_1').animate({ bottom: '0px' }, 750);
+        $('#song_title').text(item.title);
+      }
+    }
+  });
+
   App.TileView = Ember.View.extend({
     templateName: 'tile'
   });
-
-  //App.loadView = function(router, name) {
-    //var $el = $('#content'),
-        //appController = router.get('applicationController');
-
-    //$el.fadeOut(300, function() {
-      //appController.connectOutlet(name);
-      //$el.fadeIn(400);
-    //});
-
-    //$('#jp_container_1').animate({
-      //bottom: '-100px'
-    //}, 500);
-    //$('#jquery_jplayer_1').jPlayer('stop');
-
-    //// on initial load, just add the view
-    //if ($el.length === 0) appController.connectOutlet(name);
-  //};
-
-  //rootRoutes = cldn.scaffold(App, 'dev', App.loadView, {
-    //'Application': {}, 'Sandbox': {}, 'About': {}, 'Contact': {},
-    //'Dev':   {
-      //viewOpts: {
-        //templateName: 'tiles',
-        //showContent: function(e) {
-          //var thumb = e.context,
-              //playerTypes = { image: 'img', video: 'qt', flash: 'swf', link: 'iframe' };
-
-          //e.preventDefault();
-
-          //Shadowbox.open({
-            //content: thumb.asset_url,
-            //title:   thumb.title,
-            //width:   thumb.width,
-            //height:  thumb.height,
-            //player:  playerTypes[thumb.kind]
-          //});
-        //}
-      //},
-      //controllerOpts: {'tiles': cldn.data.dev}
-    //},
-    //'Music': {
-      //viewOpts: {
-        //templateName: 'tiles',
-        //showContent: function(e) {
-          //var thumb   = e.context,
-              //$player = $('#jquery_jplayer_1');
-
-          //e.preventDefault();
-
-          //$player.jPlayer('clearMedia');
-          //$player.jPlayer('setMedia', {
-            //mp3: thumb.asset_url
-          //});
-
-          //$player.jPlayer('play');
-          //$('#jp_container_1').animate({
-            //bottom: '0px'
-          //}, 750);
-
-          //$('#song_title').text(thumb.title);
-        //}
-      //},
-      //controllerOpts: {'tiles': cldn.data.music}
-    //}
-  //});
 
   // jplayer
   $('#jquery_jplayer_1')

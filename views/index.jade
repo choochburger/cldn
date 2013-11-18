@@ -25,7 +25,7 @@ block content
       | </div>
 
     script(type='text/x-handlebars', data-template-name='tile')
-      | <a href="#" {{action "showContent" on="click" target="content"}}>
+      | <a href="#" {{action "showContent" tile}}>
       |   <div class="tile" style="background-image: url('{{unbound tile.thumbnail_url}}');">
       |     <div class="description">
       |       {{{tile.description}}}
@@ -99,7 +99,7 @@ block content
       | </div>
 
     #jquery_jplayer_1.jp-jplayer
-    #jp_container_1.jp-audio
+    #jp_container_1.jp-audio(style='bottom: -100px')
       .flash-warning(style='display: none')
         | This browser requires the Flash plugin to play MP3 audio. Please enable it to listen.
       .jp-type-playlist
