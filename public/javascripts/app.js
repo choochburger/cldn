@@ -13,21 +13,7 @@ $(function() {
   });
 
   App.NavView = Ember.View.extend({
-    templateName: 'nav',
-    didInsertElement: function() {
-      //var $el = $(this.get('element')),
-      //var $links = $('#nav a[target!="_blank"]'),
-          //stateName;
-
-      //$links.click(function() {
-        //$links.removeClass('selected');
-        //$(this).addClass('selected');
-      //});
-
-      //// set initial page
-      //stateName = App.stateManager.get('currentState').name;
-      //$('#nav a[href=#'+stateName+']').addClass('selected');
-    }
+    templateName: 'nav'
   });
 
   App.DevView = Ember.View.extend({

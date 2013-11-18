@@ -14,13 +14,13 @@ block content
     script(type='text/x-handlebars', data-template-name='nav')
       | <div id="nav">
       |   <ul class="horizontal">
-      |     <li><a href="#dev">DEVELOPMENT</a></a></li>
-      |     <li><a href="#music">MUSIC</a></a></li>
-      |     <li><a href="#about">ABOUT</a></a></li>
-      |     <li class="divider"><a href="#contact">CONTACT</a></a></li>
-      |     <li><a href="http://blog.chrislyons.net" target="_blank">BLOG</a></a></li>
-      |     <li><a href="http://codepen.io/choochburger" target="_blank">CODEPEN</a></a></li>
-      |     <li><a href="http://www.github.com/choochburger" target="_blank">GITHUB</a></a></li>
+      |     <li>{{#link-to "dev"}}DEVELOPMENT{{/link-to}}</li>
+      |     <li>{{#link-to "music"}}MUSIC{{/link-to}}</li>
+      |     <li>{{#link-to "about"}}ABOUT{{/link-to}}</li>
+      |     <li class="divider">{{#link-to "contact"}}CONTACT{{/link-to}}</li>
+      |     <li><a href="http://blog.chrislyons.net" target="_blank">BLOG</a></li>
+      |     <li><a href="http://codepen.io/choochburger" target="_blank">CODEPEN</a></li>
+      |     <li><a href="http://www.github.com/choochburger" target="_blank">GITHUB</a></li>
       |   </ul>
       | </div>
 
