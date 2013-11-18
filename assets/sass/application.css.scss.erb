@@ -152,7 +152,7 @@ ul.horizontal {
     text-decoration: underline;
   }
 
-  a.selected {
+  a.active {
     color: darkkhaki;
   }
 }
@@ -222,11 +222,11 @@ ul.horizontal {
 
 $arrowColor: rgba(100, 100, 100, 0.5);
 
-.selected {
+.active {
 	position: relative;
 }
 
-.selected:after, .selected:before {
+.active:after, .active:before {
 	top: 100%;
 	border: solid transparent;
 	content: " ";
@@ -236,14 +236,14 @@ $arrowColor: rgba(100, 100, 100, 0.5);
 	pointer-events: none;
 }
 
-.selected:after {
+.active:after {
 	border-top-color: $arrowColor;
 	border-width: 10px;
 	left: 50%;
 	margin-left: -10px;
 }
 
-.selected:before {
+.active:before {
 	border-top-color: $arrowColor;
 	border-width: 16px;
 	left: 50%;
