@@ -6,7 +6,7 @@ cldn.data.dev = [{
     "height": 600,
     "id": 1,
     "kind": "link",
-    "thumbnail_url": "http://www.chrislyons.net/web/scale_variator/scale_variator.png",
+    "thumbnail_url": cldn.paths.assets + "/web/scale_variator/scale_variator.png",
     "title": "Scale Variator iPhone App",
     "update_at": null,
     "width": 800
@@ -18,7 +18,7 @@ cldn.data.dev = [{
     "height": 315,
     "id": 2,
     "kind": "link",
-    "thumbnail_url": "http://www.chrislyons.net/web/tool_game/tool_game.png",
+    "thumbnail_url": cldn.paths.assets + "/web/tool_game/tool_game.png",
     "title": "Finale Tool Game",
     "update_at": null,
     "width": 420
@@ -30,7 +30,7 @@ cldn.data.dev = [{
     "height": 315,
     "id": 3,
     "kind": "link",
-    "thumbnail_url": "http://www.chrislyons.net/web/lenz/lenz.png",
+    "thumbnail_url": cldn.paths.assets + "/web/lenz/lenz.png",
     "title": "Lenz Entertainment",
     "update_at": null,
     "width": 420
@@ -42,7 +42,7 @@ cldn.data.dev = [{
     "height": 356,
     "id": 4,
     "kind": "link",
-    "thumbnail_url": "http://www.chrislyons.net/web/lms_recorder/lms_recorder.png",
+    "thumbnail_url": cldn.paths.assets + "/web/lms_recorder/lms_recorder.png",
     "title": "Audio/Video Recorder",
     "update_at": null,
     "width": 480
@@ -54,31 +54,31 @@ cldn.data.dev = [{
     "height": null,
     "id": 5,
     "kind": "link",
-    "thumbnail_url": "http://www.chrislyons.net/web/study_buddy/study_buddy.png",
+    "thumbnail_url": cldn.paths.assets + "/web/study_buddy/study_buddy.png",
     "title": "Study Buddy",
     "update_at": null,
     "width": null
   }, {
-    "asset_url": "http://www.chrislyons.net/web/pent_quiz/pent_quiz.swf",
+    "asset_url": cldn.paths.assets + "/web/pent_quiz/pent_quiz.swf",
     "category": "web",
     "create_at": null,
     "description": "A pentatonic scale quiz for a Funk and R&B guitar soloing course at berkleemusic.com.",
     "height": 330,
     "id": 7,
     "kind": "flash",
-    "thumbnail_url": "http://www.chrislyons.net/web/pent_quiz/pent_quiz.png",
+    "thumbnail_url": cldn.paths.assets + "/web/pent_quiz/pent_quiz.png",
     "title": "Pentatonic Quiz",
     "update_at": null,
     "width": 590
   }, {
-    "asset_url": "http://chrislyons.net/web/permutator/permutator.swf?path=http://chrislyons.net/web/permutator/minor_pentatonic.xml",
+    "asset_url": cldn.paths.assets + "/web/permutator/permutator.swf",
     "category": "web",
     "create_at": null,
     "description": "A customizable, xml based tool for generating complex scale permutation exercises. This was the precursor to the Scale Variator iPhone app.",
     "height": 620,
     "id": 9,
     "kind": "link",
-    "thumbnail_url": "http://www.chrislyons.net/web/permutator/permutator.png",
+    "thumbnail_url": cldn.paths.assets + "/web/permutator/permutator.png",
     "title": "Scale Permutator",
     "update_at": null,
     "width": 885
@@ -90,7 +90,7 @@ cldn.data.dev = [{
     "height": 315,
     "id": 10,
     "kind": "link",
-    "thumbnail_url": "http://www.chrislyons.net/web/falling_text/falling_text.png",
+    "thumbnail_url": cldn.paths.assets + "/web/falling_text/falling_text.png",
     "title": "Falling Text",
     "update_at": null,
     "width": 420
@@ -102,7 +102,7 @@ cldn.data.dev = [{
     "height": 310,
     "id": 12,
     "kind": "link",
-    "thumbnail_url": "http://www.chrislyons.net/web/popcorn/popcorn.png",
+    "thumbnail_url": cldn.paths.assets + "/web/popcorn/popcorn.png",
     "title": "Popcorn",
     "update_at": null,
     "width": 414
