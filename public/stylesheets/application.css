@@ -1357,7 +1357,7 @@ ul.horizontal li.divider {
 
 /* jplayer */
 /* line 244, ../../assets/sass/application.scss */
-#jp_container_1 {
+#jp_container {
   bottom: 0;
   position: fixed;
   right: 0;
