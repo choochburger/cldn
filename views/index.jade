@@ -134,7 +134,12 @@ block content
   #jplayer_spacer
 
   script(type='text/javascript')
-    window.cldn = window.cldn || { data: {} };
+    window.cldn = window.cldn || {
+      paths: {
+        assets: 'https://dl.dropboxusercontent.com/u/4323064/cldn_assets',
+      },
+      data: {}
+    };
 
   script(type='text/javascript', src='/javascripts/data/music.js')
   script(type='text/javascript', src='/javascripts/data/dev.js')
