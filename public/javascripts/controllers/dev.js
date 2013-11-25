@@ -18,7 +18,7 @@ $(function() {
           player:  playerTypes[item.kind]
         });
 
-        $('#jquery_jplayer_1').jPlayer('stop');
+        $('#jquery_jplayer').jPlayer('stop');
       }
     }
   });
