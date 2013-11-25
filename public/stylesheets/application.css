@@ -1,0 +1,1381 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* line 18, ../../assets/sass/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 28, ../../assets/sass/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 31, ../../assets/sass/_reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 34, ../../assets/sass/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 37, ../../assets/sass/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 41, ../../assets/sass/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 45, ../../assets/sass/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*
+ * Skin for jPlayer Plugin (jQuery JavaScript Library)
+ * http://www.happyworm.com/jquery/jplayer
+ *
+ * Skin Name: Midnight Black
+ *
+ * Copyright (c) 2012 Per Sandström (https://github.com/persand) and Kasim Ahmic (https://github.com/TheInfection)
+ * Dual licensed under the MIT and GPL licenses.
+ *  - http://www.opensource.org/licenses/mit-license.php
+ *  - http://www.gnu.org/copyleft/gpl.html
+ *
+ * Authors: Per Sandström (Updated to support jPlayer 2.1.0 by Kasim Ahmic)
+ * Skin Version: 2.0 (jPlayer 2.1.0)
+ * Date: April 27th 2012
+ */
+/* line 17, ../../assets/sass/_jplayer.midnight.black.scss */
+*:active, *:focus {
+  outline: none !important;
+}
+
+/* line 22, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-audio,
+div.jp-video {
+  /* Edit the font-size to counteract inherited font sizing.
+   * Eg. 1.25em = 1 / 0.8em
+   */
+  font-size: 1em;
+  /* 1.25em for testing in site pages */
+  /* No parent CSS that can effect the size in the demos ZIP */
+  font-family: Verdana, Arial, sans-serif;
+  line-height: 1.6;
+  color: #666;
+  border: 1px solid black;
+  background-color: #000;
+  position: relative;
+}
+
+/* line 37, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-audio {
+  width: 480px;
+}
+
+/* line 40, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-video-270p {
+  width: 480px;
+}
+
+/* line 43, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-video-360p {
+  width: 640px;
+}
+
+/* line 46, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-video-full {
+  /* Rules for IE6 (full-screen) */
+  width: 480px;
+  height: 270px;
+  /* Rules for IE7 (full-screen) - Otherwise the relative container causes other page items that are not position:static (default) to appear over the video/gui. */
+  position: static !important;
+  position: relative;
+}
+
+/* line 54, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-video-full div.jp-jplayer {
+  top: 0;
+  left: 0;
+  position: fixed !important;
+  position: relative;
+  /* Rules for IE6 (full-screen) */
+  overflow: hidden;
+  z-index: 1000;
+  margin-left: 0 !important;
+}
+
+/* line 63, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-video-full div.jp-gui {
+  position: fixed !important;
+  position: static;
+  /* Rules for IE6 (full-screen) */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+
+/* line 72, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-video-full div.jp-interface {
+  position: absolute !important;
+  position: relative;
+  /* Rules for IE6 (full-screen) */
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* line 79, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-interface {
+  position: relative;
+  background: #111112 url("/images/midnight.black/jplayer.midnight.black.interface.png") repeat-x;
+  width: 100%;
+}
+
+/* line 85, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-audio div.jp-type-single div.jp-interface {
+  height: 75px;
+}
+
+/* line 88, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-audio div.jp-type-playlist div.jp-interface {
+  height: 70px;
+}
+
+/* line 92, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-video div.jp-interface {
+  border: 0;
+}
+
+/* @group CONTROLS */
+/* line 98, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-controls-holder {
+  clear: both;
+  width: 440px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  top: -8px;
+  /* This negative value depends on the size of the text in jp-currentTime and jp-duration */
+}
+
+/* line 107, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-interface ul.jp-controls {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* line 114, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-audio ul.jp-controls {
+  width: 460px;
+  padding: 15px 15px 0 10px;
+}
+
+/* line 119, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-video div.jp-type-single ul.jp-controls {
+  width: 78px;
+  margin-left: 200px;
+}
+
+/* line 124, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-video div.jp-type-playlist ul.jp-controls {
+  width: 134px;
+  margin-left: 150px;
+}
+
+/* line 129, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-video ul.jp-controls,
+div.jp-interface ul.jp-controls li {
+  display: inline;
+  float: left;
+}
+
+/* line 134, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-interface ul.jp-controls a {
+  display: block;
+  overflow: hidden;
+  text-indent: -9999px;
+}
+
+/* line 140, ../../assets/sass/_jplayer.midnight.black.scss */
+a.jp-play,
+a.jp-pause {
+  width: 40px;
+  height: 40px;
+}
+
+/* line 145, ../../assets/sass/_jplayer.midnight.black.scss */
+a.jp-play {
+  background: url("/images/midnight.black/jplayer.midnight.black.png") 0 0 no-repeat;
+}
+
+/* line 148, ../../assets/sass/_jplayer.midnight.black.scss */
+a.jp-play:hover {
+  background: url("/images/midnight.black/jplayer.midnight.black.png") -41px 0 no-repeat;
+}
+
+/* line 151, ../../assets/sass/_jplayer.midnight.black.scss */
+a.jp-pause {
+  background: url("/images/midnight.black/jplayer.midnight.black.png") 0 -42px no-repeat;
+  display: none;
+}
+
+/* line 155, ../../assets/sass/_jplayer.midnight.black.scss */
+a.jp-pause:hover {
+  background: url("/images/midnight.black/jplayer.midnight.black.png") -41px -42px no-repeat;
+}
+
+/* line 159, ../../assets/sass/_jplayer.midnight.black.scss */
+a.jp-stop, a.jp-previous, a.jp-next {
+  width: 28px;
+  height: 28px;
+  margin-top: 6px;
+}
+
+/* line 165, ../../assets/sass/_jplayer.midnight.black.scss */
+a.jp-stop {
+  background: url("/images/midnight.black/jplayer.midnight.black.png") 0 -83px no-repeat;
+  margin-left: 10px;
+}
+
+/* line 170, ../../assets/sass/_jplayer.midnight.black.scss */
+a.jp-stop:hover {
+  background: url("/images/midnight.black/jplayer.midnight.black.png") -29px -83px no-repeat;
+}
+
+/* line 174, ../../assets/sass/_jplayer.midnight.black.scss */
+a.jp-previous {
+  background: url("/images/midnight.black/jplayer.midnight.black.png") 0 -112px no-repeat;
+}
+
+/* line 177, ../../assets/sass/_jplayer.midnight.black.scss */
+a.jp-previous:hover {
+  background: url("/images/midnight.black/jplayer.midnight.black.png") -29px -112px no-repeat;
+}
+
+/* line 181, ../../assets/sass/_jplayer.midnight.black.scss */
+a.jp-next {
+  background: url("/images/midnight.black/jplayer.midnight.black.png") 0 -141px no-repeat;
+}
+
+/* line 184, ../../assets/sass/_jplayer.midnight.black.scss */
+a.jp-next:hover {
+  background: url("/images/midnight.black/jplayer.midnight.black.png") -29px -141px no-repeat;
+}
+
+/* @end */
+/* @group progress bar */
+/* line 192, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-progress {
+  overflow: hidden;
+  background: url("/images/midnight.black/jplayer.midnight.black.png") 0 -202px repeat-x;
+  border-radius: 5px;
+}
+
+/* line 197, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-audio div.jp-progress {
+  position: absolute;
+  top: 27px;
+  height: 15px;
+}
+
+/* line 202, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-audio div.jp-type-single div.jp-progress {
+  left: 110px;
+  width: 186px;
+}
+
+/* line 206, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-audio div.jp-type-playlist div.jp-progress {
+  left: 156px;
+  width: 130px;
+}
+
+/* line 210, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-video div.jp-progress {
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 10px;
+}
+
+/* line 216, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-seek-bar {
+  background: url("/images/midnight.black/jplayer.midnight.black.png") 0 -202px repeat-x;
+  width: 0px;
+  height: 100%;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* line 223, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-play-bar {
+  background: url("/images/midnight.black/jplayer.midnight.black.png") 0 -218px repeat-x;
+  width: 0px;
+  height: 100%;
+  border-radius: 5px;
+}
+
+/* line 229, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-video div.jp-seek-bar {
+  border-radius: 0 !important;
+}
+
+/* line 232, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-video div.jp-play-bar {
+  border-radius: 0px !important;
+}
+
+/* The seeking class is added/removed inside jPlayer */
+/* line 238, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-seeking-bg {
+  background: url("/images/midnight.black/jplayer.midnight.black.seeking.gif");
+}
+
+/* @end */
+/* @group volume controls */
+/* line 249, ../../assets/sass/_jplayer.midnight.black.scss */
+a.jp-mute,
+a.jp-unmute,
+a.jp-volume-max {
+  width: 18px;
+  height: 15px;
+  margin-top: 12px;
+  margin-left: -24px;
+}
+
+/* line 257, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-audio div.jp-type-single a.jp-mute,
+div.jp-audio div.jp-type-single a.jp-unmute {
+  margin-left: 210px;
+}
+
+/* line 262, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-audio div.jp-type-playlist a.jp-mute,
+div.jp-audio div.jp-type-playlist a.jp-unmute {
+  margin-left: 154px;
+}
+
+/* line 266, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-audio a.jp-volume-max {
+  margin-left: 56px;
+}
+
+/* line 270, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-audio div.jp-type-single a.jp-volume-max {
+  margin-left: 126px !important;
+}
+
+/* line 274, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-audio div.jp-type-single a.jp-mute {
+  margin-left: 220px !important;
+}
+
+/* line 280, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-video a.jp-mute,
+div.jp-video a.jp-unmute,
+div.jp-video a.jp-volume-max {
+  position: absolute;
+  top: 12px;
+  margin-top: 0;
+}
+
+/* line 287, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-video a.jp-mute,
+div.jp-video a.jp-unmute {
+  left: 50px;
+}
+
+/* line 292, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-video a.jp-volume-max {
+  left: 134px;
+}
+
+/* line 296, ../../assets/sass/_jplayer.midnight.black.scss */
+a.jp-mute {
+  background: url("/images/midnight.black/jplayer.midnight.black.png") 0 -170px no-repeat;
+}
+
+/* line 299, ../../assets/sass/_jplayer.midnight.black.scss */
+a.jp-mute:hover {
+  background: url("/images/midnight.black/jplayer.midnight.black.png") -19px -170px no-repeat;
+}
+
+/* line 302, ../../assets/sass/_jplayer.midnight.black.scss */
+a.jp-unmute {
+  background: url("/images/midnight.black/jplayer.midnight.black.png") -39px -170px no-repeat;
+  display: none;
+}
+
+/* line 306, ../../assets/sass/_jplayer.midnight.black.scss */
+a.jp-unmute:hover {
+  background: url("/images/midnight.black/jplayer.midnight.black.png") -60px -170px no-repeat;
+}
+
+/* line 310, ../../assets/sass/_jplayer.midnight.black.scss */
+a.jp-volume-max {
+  background: url("/images/midnight.black/jplayer.midnight.black.png") 0 -186px no-repeat;
+}
+
+/* line 313, ../../assets/sass/_jplayer.midnight.black.scss */
+a.jp-volume-max:hover {
+  background: url("/images/midnight.black/jplayer.midnight.black.png") -19px -186px no-repeat;
+}
+
+/* line 317, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-volume-bar {
+  position: absolute;
+  overflow: hidden;
+  background: url("/images/midnight.black/jplayer.midnight.black.png") 0 -250px repeat-x;
+  width: 46px;
+  height: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* line 326, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-audio div.jp-type-single div.jp-volume-bar {
+  position: absolute;
+  left: 337px !important;
+  overflow: hidden;
+  background: url("/images/midnight.black/jplayer.midnight.black.png") 0 -250px repeat-x;
+  width: 100px;
+  height: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* line 336, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-audio div.jp-volume-bar {
+  top: 32px;
+  left: 345px;
+}
+
+/* line 340, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-video div.jp-volume-bar {
+  top: 17px;
+  left: 50px;
+}
+
+/* line 344, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-volume-bar-value {
+  background: url("/images/midnight.black/jplayer.midnight.black.png") 0 -256px repeat-x;
+  width: 0px;
+  height: 5px;
+  border-radius: 5px;
+}
+
+/* @end */
+/* @group current time and duration */
+/* line 355, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-audio div.jp-time-holder {
+  position: absolute;
+  top: 50px;
+}
+
+/* line 359, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-audio div.jp-type-single div.jp-time-holder {
+  left: 110px;
+  width: 186px;
+}
+
+/* line 363, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-audio div.jp-type-playlist div.jp-time-holder {
+  left: 156px;
+  width: 130px;
+}
+
+/* line 369, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-current-time,
+div.jp-duration {
+  width: 60px;
+  font-size: .64em;
+  font-style: oblique;
+}
+
+/* line 374, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-current-time {
+  float: left;
+  display: inline;
+  text-align: left;
+}
+
+/* line 379, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-duration {
+  float: right;
+  display: inline;
+  text-align: right;
+}
+
+/* line 385, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-video div.jp-current-time {
+  margin-left: 20px;
+}
+
+/* line 388, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-video div.jp-duration {
+  margin-right: 20px;
+}
+
+/* @end */
+/* @group playlist */
+/* line 396, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-title {
+  font-weight: bold;
+  text-align: center;
+  color: #FFF;
+  text-shadow: 0 1px 0px rgba(0, 0, 0, 0.3);
+}
+
+/* line 404, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-title,
+div.jp-playlist {
+  width: 100%;
+  background: url("/images/midnight.black/jplayer.midnight.black.playlist_bg.png");
+  border: 0;
+  text-align: left !important;
+}
+
+/* line 412, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-type-single div.jp-title,
+div.jp-type-playlist div.jp-title,
+div.jp-type-single div.jp-playlist {
+  border-top: none;
+}
+
+/* line 416, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-title ul,
+div.jp-playlist ul {
+  list-style-type: none !important;
+  margin: 0;
+  padding: 0 0;
+  font-size: .72em;
+}
+
+/* line 423, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-title li {
+  padding: 5px 15px 5px 15px;
+  font-weight: bold;
+}
+
+/* line 427, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-playlist li {
+  padding: 5px 15px 5px 15px;
+  border-bottom: none;
+  background: url("/images/midnight.black/jplayer.midnight.black.playlist_bg.png");
+  text-shadow: 0 1px 0px rgba(0, 0, 0, 0.3);
+}
+
+/* line 434, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-playlist li div {
+  display: inline;
+}
+
+/* Note that the first-child (IE6) and last-child (IE6/7/8) selectors do not work on IE */
+/* line 440, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-type-playlist div.jp-playlist li:last-child {
+  padding: 5px 0 5px 15px;
+  border-bottom: none;
+}
+
+/* line 444, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-type-playlist div.jp-playlist li.jp-playlist-current {
+  list-style-type: none;
+  list-style-position: inside;
+  padding-left: 15px;
+}
+
+/* line 449, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-type-playlist div.jp-playlist a {
+  color: #BBB;
+  text-decoration: none;
+}
+
+/* line 453, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-type-playlist div.jp-playlist a:hover {
+  color: #FFF;
+}
+
+/* line 456, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-type-playlist div.jp-playlist a.jp-playlist-current {
+  color: #FFF;
+  font-weight: bold;
+}
+
+/* line 461, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-type-playlist div.jp-playlist a.jp-playlist-item-remove {
+  float: right;
+  display: inline;
+  text-align: right;
+  margin-right: 10px;
+  font-weight: bold;
+  color: #666;
+}
+
+/* line 469, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-type-playlist div.jp-playlist a.jp-playlist-item-remove:hover {
+  color: #0d88c1;
+}
+
+/* line 472, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-type-playlist div.jp-playlist span.jp-free-media {
+  float: right;
+  display: inline;
+  text-align: right;
+  margin-right: 10px;
+}
+
+/* line 478, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-type-playlist div.jp-playlist span.jp-free-media a {
+  color: #666;
+}
+
+/* line 481, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-type-playlist div.jp-playlist span.jp-free-media a:hover {
+  color: #0d88c1;
+}
+
+/* line 484, ../../assets/sass/_jplayer.midnight.black.scss */
+span.jp-artist {
+  font-size: .8em;
+  color: #666;
+}
+
+/* @end */
+/* line 491, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-video-play {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0);
+  /* Makes IE9 work with the active area over the whole video area. IE6/7/8 only have the button as active area. */
+}
+
+/* line 499, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-video-270p div.jp-video-play {
+  height: 270px;
+}
+
+/* line 502, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-video-360p div.jp-video-play {
+  height: 360px;
+}
+
+/* line 505, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-video-full div.jp-video-play {
+  height: 100%;
+  z-index: 1000;
+}
+
+/* line 509, ../../assets/sass/_jplayer.midnight.black.scss */
+a.jp-video-play-icon {
+  position: relative;
+  display: block;
+  width: 112px;
+  height: 100px;
+  margin-left: -56px;
+  margin-top: -50px;
+  left: 50%;
+  top: 50%;
+  background: url("/images/midnight.black/jplayer.midnight.black.video.play.png") 0 0 no-repeat;
+  text-indent: -9999px;
+}
+
+/* line 523, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-video-play:hover a.jp-video-play-icon {
+  background: url("/images/midnight.black/jplayer.midnight.black.video.play.png") 0 -100px no-repeat;
+}
+
+/* line 532, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-jplayer audio,
+div.jp-jplayer {
+  width: 0px;
+  height: 0px;
+}
+
+/* line 537, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-jplayer {
+  background-color: #000000;
+}
+
+/* @group TOGGLES */
+/* The audio toggles are nested inside jp-time-holder */
+/* line 549, ../../assets/sass/_jplayer.midnight.black.scss */
+ul.jp-toggles {
+  width: 110px;
+  display: block;
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* line 558, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-audio .jp-type-single ul.jp-toggles {
+  width: 28px;
+  margin-top: -4px;
+}
+
+/* line 562, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-audio .jp-type-playlist ul.jp-toggles {
+  width: 65px;
+  margin: 0;
+  position: absolute;
+  right: 8px;
+  top: 22px;
+}
+
+/* line 570, ../../assets/sass/_jplayer.midnight.black.scss */
+div.jp-video ul.jp-toggles {
+  margin-top: 7px;
+  width: 110px;
+}
+
+/* line 575, ../../assets/sass/_jplayer.midnight.black.scss */
+ul.jp-toggles li {
+  display: block;
+  float: right;
+}
+
+/* line 580, ../../assets/sass/_jplayer.midnight.black.scss */
+ul.jp-toggles li a {
+  display: block;
+  width: 28px;
+  height: 28px;
+  text-indent: -9999px;
+  line-height: 100%;
+  /* need this for IE6 */
+}
+
+/* line 588, ../../assets/sass/_jplayer.midnight.black.scss */
+a.jp-shuffle {
+  background: url("/images/midnight.black/jplayer.midnight.black.png") 0 -262px no-repeat;
+  margin-left: 5px;
+}
+
+/* line 593, ../../assets/sass/_jplayer.midnight.black.scss */
+a.jp-shuffle:hover {
+  background: url("/images/midnight.black/jplayer.midnight.black.png") -30px -262px no-repeat;
+}
+
+/* line 597, ../../assets/sass/_jplayer.midnight.black.scss */
+a.jp-shuffle-off {
+  background: url("/images/midnight.black/jplayer.midnight.black.png") -60px -262px no-repeat;
+  margin-left: 5px;
+}
+
+/* line 602, ../../assets/sass/_jplayer.midnight.black.scss */
+a.jp-shuffle-off:hover {
+  background: url("/images/midnight.black/jplayer.midnight.black.png") -90px -262px no-repeat;
+}
+
+/* line 606, ../../assets/sass/_jplayer.midnight.black.scss */
+a.jp-repeat {
+  background: url("/images/midnight.black/jplayer.midnight.black.png") 0 -290px no-repeat;
+}
+
+/* line 610, ../../assets/sass/_jplayer.midnight.black.scss */
+a.jp-repeat:hover {
+  background: url("/images/midnight.black/jplayer.midnight.black.png") -30px -290px no-repeat;
+}
+
+/* line 614, ../../assets/sass/_jplayer.midnight.black.scss */
+a.jp-repeat-off {
+  background: url("/images/midnight.black/jplayer.midnight.black.png") -60px -290px no-repeat;
+}
+
+/* line 618, ../../assets/sass/_jplayer.midnight.black.scss */
+a.jp-repeat-off:hover {
+  background: url("/images/midnight.black/jplayer.midnight.black.png") -90px -290px no-repeat;
+}
+
+/* line 622, ../../assets/sass/_jplayer.midnight.black.scss */
+a.jp-full-screen {
+  background: url("/images/midnight.black/jplayer.midnight.black.png") 0 -318px no-repeat;
+  margin-left: 20px;
+}
+
+/* line 627, ../../assets/sass/_jplayer.midnight.black.scss */
+a.jp-full-screen:hover {
+  background: url("/images/midnight.black/jplayer.midnight.black.png") -30px -318px no-repeat;
+}
+
+/* line 631, ../../assets/sass/_jplayer.midnight.black.scss */
+a.jp-restore-screen {
+  background: url("/images/midnight.black/jplayer.midnight.black.png") -60px -318px no-repeat;
+  margin-left: 20px;
+}
+
+/* line 636, ../../assets/sass/_jplayer.midnight.black.scss */
+a.jp-restore-screen:hover {
+  background: url("/images/midnight.black/jplayer.midnight.black.png") -90px -318px no-repeat;
+}
+
+/* @end */
+/* @group NO SOLUTION error feedback */
+/* line 645, ../../assets/sass/_jplayer.midnight.black.scss */
+.jp-no-solution {
+  position: absolute;
+  width: 390px;
+  margin-left: -202px;
+  left: 50%;
+  top: 10px;
+  padding: 5px;
+  font-size: .8em;
+  background-color: #eee;
+  border: 2px solid #009be3;
+  color: #000;
+  display: none;
+}
+
+/* line 660, ../../assets/sass/_jplayer.midnight.black.scss */
+.jp-no-solution a {
+  color: #000;
+}
+
+/* line 664, ../../assets/sass/_jplayer.midnight.black.scss */
+.jp-no-solution span {
+  font-size: 1em;
+  display: block;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* @end */
+/* line 1, ../../assets/sass/_shadowbox.scss */
+#sb-title-inner, #sb-info-inner, #sb-loading-inner, div.sb-message {
+  font-family: "HelveticaNeue-Light","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 200;
+  color: #fff;
+}
+
+/* line 2, ../../assets/sass/_shadowbox.scss */
+#sb-container {
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  text-align: left;
+  visibility: hidden;
+  display: none;
+}
+
+/* line 3, ../../assets/sass/_shadowbox.scss */
+#sb-overlay {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 4, ../../assets/sass/_shadowbox.scss */
+#sb-wrapper {
+  position: absolute;
+  visibility: hidden;
+  width: 100px;
+}
+
+/* line 5, ../../assets/sass/_shadowbox.scss */
+#sb-wrapper-inner {
+  position: relative;
+  border: 1px solid #303030;
+  overflow: hidden;
+  height: 100px;
+}
+
+/* line 6, ../../assets/sass/_shadowbox.scss */
+#sb-body {
+  position: relative;
+  height: 100%;
+}
+
+/* line 7, ../../assets/sass/_shadowbox.scss */
+#sb-body-inner {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 8, ../../assets/sass/_shadowbox.scss */
+#sb-player.html {
+  height: 100%;
+  overflow: auto;
+}
+
+/* line 9, ../../assets/sass/_shadowbox.scss */
+#sb-body img {
+  border: none;
+}
+
+/* line 10, ../../assets/sass/_shadowbox.scss */
+#sb-loading {
+  position: relative;
+  height: 100%;
+}
+
+/* line 11, ../../assets/sass/_shadowbox.scss */
+#sb-loading-inner {
+  position: absolute;
+  font-size: 14px;
+  line-height: 24px;
+  height: 24px;
+  top: 50%;
+  margin-top: -12px;
+  width: 100%;
+  text-align: center;
+}
+
+/* line 12, ../../assets/sass/_shadowbox.scss */
+#sb-loading-inner span {
+  background: url(/images/shadowbox/loading.gif) no-repeat;
+  padding-left: 34px;
+  display: inline-block;
+}
+
+/* line 13, ../../assets/sass/_shadowbox.scss */
+#sb-body, #sb-loading {
+  background-color: #060606;
+}
+
+/* line 14, ../../assets/sass/_shadowbox.scss */
+#sb-title, #sb-info {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* line 15, ../../assets/sass/_shadowbox.scss */
+#sb-title, #sb-title-inner {
+  height: 26px;
+  line-height: 26px;
+}
+
+/* line 16, ../../assets/sass/_shadowbox.scss */
+#sb-title-inner {
+  font-size: 16px;
+}
+
+/* line 17, ../../assets/sass/_shadowbox.scss */
+#sb-info, #sb-info-inner {
+  height: 20px;
+  line-height: 20px;
+}
+
+/* line 18, ../../assets/sass/_shadowbox.scss */
+#sb-info-inner {
+  font-size: 12px;
+}
+
+/* line 19, ../../assets/sass/_shadowbox.scss */
+#sb-nav {
+  float: right;
+  height: 16px;
+  padding: 2px 0;
+  width: 45%;
+}
+
+/* line 20, ../../assets/sass/_shadowbox.scss */
+#sb-nav a {
+  display: block;
+  float: right;
+  height: 16px;
+  width: 16px;
+  margin-left: 3px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+}
+
+/* line 21, ../../assets/sass/_shadowbox.scss */
+#sb-nav-close {
+  background-image: url(/images/shadowbox/close.png);
+}
+
+/* line 22, ../../assets/sass/_shadowbox.scss */
+#sb-nav-next {
+  background-image: url(/images/shadowbox/next.png);
+}
+
+/* line 23, ../../assets/sass/_shadowbox.scss */
+#sb-nav-previous {
+  background-image: url(/images/shadowbox/previous.png);
+}
+
+/* line 24, ../../assets/sass/_shadowbox.scss */
+#sb-nav-play {
+  background-image: url(/images/shadowbox/play.png);
+}
+
+/* line 25, ../../assets/sass/_shadowbox.scss */
+#sb-nav-pause {
+  background-image: url(/images/shadowbox/pause.png);
+}
+
+/* line 26, ../../assets/sass/_shadowbox.scss */
+#sb-counter {
+  float: left;
+  width: 45%;
+}
+
+/* line 27, ../../assets/sass/_shadowbox.scss */
+#sb-counter a {
+  padding: 0 4px 0 0;
+  text-decoration: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* line 28, ../../assets/sass/_shadowbox.scss */
+#sb-counter a.sb-counter-current {
+  text-decoration: underline;
+}
+
+/* line 29, ../../assets/sass/_shadowbox.scss */
+div.sb-message {
+  font-size: 12px;
+  padding: 10px;
+  text-align: center;
+}
+
+/* line 30, ../../assets/sass/_shadowbox.scss */
+div.sb-message a:link, div.sb-message a:visited {
+  color: #fff;
+  text-decoration: underline;
+}
+
+@font-face {
+  font-family: "Rokkitt";
+  src: url(/fonts/Rokkitt-webfont.eot);
+  src: url(/fonts/Rokkitt-webfont.eot?#iefix) format('eot'), url(/fonts/Rokkitt-webfont.eot) format('embedded-opentype'), url(/fonts/Rokkitt-webfont.woff) format('woff'), url(/fonts/Rokkitt-webfont.ttf) format('truetype'), url(/fonts/Rokkitt-webfont.svg#Rokkitt) format('svg');
+}
+
+/* line 12, ../../assets/sass/application.scss */
+body {
+  background-color: #000000;
+  background-image: url("../images/texture.png");
+  color: #dddddd;
+  font-family: 'Rokkitt', Helvetica, sans-serif;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  text-shadow: rgba(111, 111, 111, 0.4) 2px 1px 1px;
+}
+
+/* line 23, ../../assets/sass/application.scss */
+a {
+  color: orange;
+}
+
+/* line 27, ../../assets/sass/application.scss */
+p {
+  margin: 2px 0 14px;
+}
+
+/* line 31, ../../assets/sass/application.scss */
+strong {
+  font-weight: bold;
+}
+
+/* line 35, ../../assets/sass/application.scss */
+small {
+  font-size: 12px;
+}
+
+/* line 39, ../../assets/sass/application.scss */
+#main {
+  margin: 0 5%;
+}
+
+/* line 47, ../../assets/sass/application.scss */
+#content .tile {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px inset;
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px inset;
+  box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px inset;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  float: left;
+  height: 196px;
+  margin: 0 36px 36px 0;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=95);
+  opacity: 0.95;
+  text-shadow: rgba(0, 0, 0, 0.1) 2px 1px 1px;
+  width: 250px;
+}
+/* line 61, ../../assets/sass/application.scss */
+#content .tile:hover {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px;
+  box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px;
+  left: -1px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  position: relative;
+  top: -1px;
+}
+/* line 69, ../../assets/sass/application.scss */
+#content .tile .description {
+  background: rgba(255, 255, 255, 0.8);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  color: #333;
+  display: table-cell;
+  height: 196px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  padding: 2px 4px;
+  text-align: center;
+  width: 250px;
+  vertical-align: middle;
+}
+/* line 82, ../../assets/sass/application.scss */
+#content .tile:hover .description {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+/* line 87, ../../assets/sass/application.scss */
+ul li {
+  list-style: disc;
+  list-style-position: inside;
+}
+
+/* line 92, ../../assets/sass/application.scss */
+ul.horizontal {
+  margin: 0;
+  padding-left: 0;
+}
+/* line 96, ../../assets/sass/application.scss */
+ul.horizontal li {
+  display: inline;
+  list-style: none;
+}
+/* line 101, ../../assets/sass/application.scss */
+ul.horizontal li.divider {
+  border-right: 2px dotted rgba(100, 100, 100, 0.4);
+  padding-right: 30px;
+}
+
+/* line 107, ../../assets/sass/application.scss */
+#header {
+  margin: 4px 0;
+}
+/* line 108, ../../assets/sass/application.scss */
+#header h1 {
+  color: #eee;
+  display: inline-block;
+  font-size: 44px;
+  text-shadow: rgba(111, 111, 111, 0.8) 2px 1px 1px;
+}
+/* line 115, ../../assets/sass/application.scss */
+#header .logo {
+  display: inline-block;
+}
+
+/* line 122, ../../assets/sass/application.scss */
+#nav {
+  background: rgba(100, 100, 100, 0.1);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  margin-bottom: 18px;
+  padding: 6px;
+  text-shadow: rgba(111, 111, 111, 0.8) 2px 1px 1px;
+}
+/* line 129, ../../assets/sass/application.scss */
+#nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+  white-space: nowrap;
+}
+/* line 135, ../../assets/sass/application.scss */
+#nav a {
+  color: #A9E4FF;
+  cursor: pointer;
+  text-decoration: none;
+}
+/* line 141, ../../assets/sass/application.scss */
+#nav a:hover {
+  text-decoration: underline;
+}
+/* line 145, ../../assets/sass/application.scss */
+#nav a.active {
+  color: darkkhaki;
+}
+
+/* line 151, ../../assets/sass/application.scss */
+.about ul {
+  font-size: 18px;
+}
+/* line 155, ../../assets/sass/application.scss */
+.about ul li {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+/* line 160, ../../assets/sass/application.scss */
+.about .blurb {
+  background: rgba(50, 50, 50, 0.1);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  margin: 0 0 12px;
+  padding: 8px;
+}
+/* line 166, ../../assets/sass/application.scss */
+.about .blurb p {
+  margin: 0;
+}
+/* line 171, ../../assets/sass/application.scss */
+.about .me {
+  background-image: url("../images/me.png");
+  background-size: 100%;
+  float: left;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px inset;
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px inset;
+  box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px inset;
+  height: 140px;
+  margin: 0 12px 0 0;
+  width: 108px;
+}
+/* line 182, ../../assets/sass/application.scss */
+.about .description {
+  padding-top: 42px;
+}
+
+/* line 187, ../../assets/sass/application.scss */
+.contact {
+  font-size: 48px;
+  margin: 24px 0;
+  text-align: center;
+}
+
+/* clearfix */
+/* For modern browsers */
+/* line 196, ../../assets/sass/application.scss */
+.cf:before,
+.cf:after {
+  content: '';
+  display: table;
+}
+
+/* line 201, ../../assets/sass/application.scss */
+.cf:after {
+  clear: both;
+}
+
+/* For IE 6/7 (trigger hasLayout) */
+/* line 206, ../../assets/sass/application.scss */
+.cf {
+  *zoom: 1;
+}
+
+/* bottom arrow */
+/* line 215, ../../assets/sass/application.scss */
+.active {
+  position: relative;
+}
+
+/* line 219, ../../assets/sass/application.scss */
+.active:after, .active:before {
+  top: 100%;
+  border: solid transparent;
+  content: ' ';
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+/* line 229, ../../assets/sass/application.scss */
+.active:after {
+  border-top-color: rgba(100, 100, 100, 0.5);
+  border-width: 10px;
+  left: 50%;
+  margin-left: -10px;
+}
+
+/* line 236, ../../assets/sass/application.scss */
+.active:before {
+  border-top-color: rgba(100, 100, 100, 0.5);
+  border-width: 16px;
+  left: 50%;
+  margin-left: -16px;
+}
+
+/* jplayer */
+/* line 244, ../../assets/sass/application.scss */
+#jp_container_1 {
+  bottom: 0;
+  position: fixed;
+  right: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+/* line 252, ../../assets/sass/application.scss */
+#song_title {
+  color: #efefef;
+  font-size: 16px;
+  left: 430px;
+  position: absolute;
+  top: 22px;
+}
+
+/* line 260, ../../assets/sass/application.scss */
+#jplayer_spacer {
+  display: block;
+  height: 100px;
+}
