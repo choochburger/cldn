@@ -71,7 +71,7 @@ cldn.data.dev = [{
     "update_at": null,
     "width": 590
   }, {
-    "asset_url": "http://chrislyons.net/web/permutator/permutator.swf?path=http://chrislyons.net/web/permutator/minor_pentatonic.xml",
+    "asset_url": "https://dl.dropboxusercontent.com/u/4323064/cldn_assets/web/permutator/permutator.swf",
     "category": "web",
     "create_at": null,
     "description": "A customizable, xml based tool for generating complex scale permutation exercises. This was the precursor to the Scale Variator iPhone app.",
