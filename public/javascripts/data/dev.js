@@ -1,4 +1,28 @@
 cldn.data.dev = [{
+    "asset_url": "http://gilapad.com",
+    "category": "web",
+    "create_at": null,
+    "description": "<strong>GilaPad:</strong> A digital content-hub focused on e-Textbooks and real-time student collaboration <br><small>(created with the Tuatara team)</small>",
+    "height": 600,
+    "id": 1,
+    "kind": "link",
+    "thumbnail_url": cldn.paths.assets + "/web/tuatara/gilapad.png",
+    "title": "GilaPad",
+    "update_at": null,
+    "width": 800
+  }, {
+    "asset_url": "https://store.gilapad.com",
+    "category": "web",
+    "create_at": null,
+    "description": "<strong>GilaPad Marketplace:</strong> The companion marketplace for gilapad.com. Students can purchase/rent textbooks, as well as add free content to their accounts <br><small>(created with the Tuatara team)</small>",
+    "height": 600,
+    "id": 1,
+    "kind": "link",
+    "thumbnail_url": cldn.paths.assets + "/web/tuatara/marketplace.png",
+    "title": "GilaPad Marketplace",
+    "update_at": null,
+    "width": 800
+  }, {
     "asset_url": "http://itunes.apple.com/us/app/scale-variator/id423882376?mt=8",
     "category": "web",
     "create_at": null,
