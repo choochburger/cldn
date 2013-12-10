@@ -3,37 +3,37 @@ cldn.data.dev = [{
     "category": "web",
     "create_at": null,
     "description": "<strong>GilaPad:</strong> A digital content-hub focused on e-Textbooks and real-time student collaboration <br><small>(created with the Tuatara team)</small>",
-    "height": 600,
+    "height": null,
     "id": 1,
     "kind": "link",
     "thumbnail_url": cldn.paths.assets + "/web/tuatara/gilapad.png",
     "title": "GilaPad",
     "update_at": null,
-    "width": 800
+    "width": null
   }, {
     "asset_url": "https://store.gilapad.com",
     "category": "web",
     "create_at": null,
     "description": "<strong>GilaPad Marketplace:</strong> The companion marketplace for gilapad.com. Students can purchase/rent textbooks, as well as add free content to their accounts <br><small>(created with the Tuatara team)</small>",
-    "height": 600,
+    "height": null,
     "id": 1,
     "kind": "link",
     "thumbnail_url": cldn.paths.assets + "/web/tuatara/marketplace.png",
     "title": "GilaPad Marketplace",
     "update_at": null,
-    "width": 800
+    "width": null
   }, {
     "asset_url": "http://itunes.apple.com/us/app/scale-variator/id423882376?mt=8",
     "category": "web",
     "create_at": null,
     "description": "<strong>Scale Variator:</strong> A guitar practice app released through Berkleemusic.com",
-    "height": 600,
+    "height": null,
     "id": 1,
     "kind": "link",
     "thumbnail_url": cldn.paths.assets + "/web/scale_variator/scale_variator.png",
     "title": "Scale Variator iPhone App",
     "update_at": null,
-    "width": 800
+    "width": null
   }, {
     "asset_url": "//www.youtube.com/embed/lf9TCX1nDkA",
     "category": "web",
