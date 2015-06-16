@@ -23,7 +23,7 @@ cldn.data.dev = [{
     "update_at": null,
     "width": null
   }, {
-    "asset_url": "http://itunes.apple.com/us/app/scale-variator/id423882376?mt=8",
+    "asset_url": "http://online.berklee.edu/welcome/scale-variator",
     "category": "web",
     "create_at": null,
     "description": "<strong>Scale Variator:</strong> A guitar practice app released through Berkleemusic.com",
