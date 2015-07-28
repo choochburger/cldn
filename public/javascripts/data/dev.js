@@ -71,17 +71,17 @@ cldn.data.dev = [{
     "update_at": null,
     "width": 480
   }, {
-    "asset_url": "http://blog.chrislyons.net/?p=121",
+    "asset_url": "//www.youtube.com/embed/iuFrk4bB-Lk",
     "category": "web",
     "create_at": null,
     "description": "<strong>Study Buddy:</strong> A jQuery Mobile web app with tight google docs integration to make studying easy!",
-    "height": null,
+    "height": 315,
     "id": 5,
     "kind": "link",
     "thumbnail_url": cldn.paths.assets + "/web/study_buddy/study_buddy.png",
     "title": "Study Buddy",
     "update_at": null,
-    "width": null
+    "width": 560
   }, {
     "asset_url": cldn.paths.assets + "/web/pent_quiz/pent_quiz.swf",
     "category": "web",
