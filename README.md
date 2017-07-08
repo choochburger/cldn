@@ -1,10 +1,30 @@
-chrislyons.net is now riding ~~the rails~~ express... or something.
+# cldn
 
+> chrislyons.net
+
+## Build Setup
+
+``` bash
+# install dependencies
+npm install
+
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build
+
+# build for production and view the bundle analyzer report
+npm run build --report
+
+# run unit tests
+npm run unit
+
+# run e2e tests
+npm run e2e
+
+# run all tests
+npm test
 ```
-   _____                 . . . . . o o o o o
-  __|[_]|__ ___________ _______    ____      o
- |[] [] []| [] [] [] [] [_____(__  ][]]_n_n__][.
-_|________|_[_________]_[________]_|__|__cldn__)<
-  oo    oo 'oo      oo ' oo    oo 'oo 0000---oo\_
- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- ```
+
+For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
