@@ -3,6 +3,8 @@ import Router from 'vue-router';
 import Index from '@/components/Index';
 import Development from '@/components/Development';
 import Music from '@/components/Music';
+import devItems from '@/data/dev';
+import musicItems from '@/data/music';
 
 Vue.use(Router);
 
@@ -17,11 +19,17 @@ export default new Router({
       path: '/development',
       name: 'Development',
       component: Development,
+      props: {
+        items: devItems,
+      },
     },
     {
       path: '/music',
       name: 'Music',
       component: Music,
+      props: {
+        items: musicItems,
+      },
     },
   ],
 });

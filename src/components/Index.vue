@@ -14,10 +14,10 @@
     <h3>Other links:</h3>
     <ul>
       <li>
-        <a href="http://www.github.com/choochburger" target="_blank">Github</a>
+        <a href="http://www.github.com/choochburger" target="_blank" rel="external">Github</a>
       </li>
       <li>
-        <a href="https://www.linkedin.com/in/chris-lyons-8130b317/" target="_blank">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/chris-lyons-8130b317/" target="_blank" rel="external">LinkedIn</a>
       </li>
     </ul>
   </div>
