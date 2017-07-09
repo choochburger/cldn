@@ -17,12 +17,12 @@
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    margin-top: 60px;
+    margin: 60px 20px;
   }
 
   ul {
-    li {
-      font-weight: bold;
-    }
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
 </style>
